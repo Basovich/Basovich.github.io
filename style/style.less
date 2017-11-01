@@ -1,0 +1,562 @@
+/* VARIABLE  */
+@white: #FFF;
+@gray: #808080;
+
+
+
+/* MIXIN */
+
+.section() {
+	padding: 50px 0;
+}
+
+.title() {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.sections-title() {
+	font-weight: 100;
+	padding: 10px 30px;
+	text-align: center;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+// для списка на 3ем экране
+.list-items {
+	list-style-type: none;
+	list-style-position: inside;
+	padding: 0;	
+	font-weight: 100;
+	font-size: 14px;
+	line-height: 2;
+}
+
+/*------------------
+		Общие стили
+-------------------*/
+
+body {		
+	font-family: 'Raleway', sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+	letter-spacing: 5px;
+	box-sizing: border-box;
+}
+
+
+/*-----------------------------------
+	Стили для первого окна - обложки
+------------------------------------*/
+
+/* Задаем фоновый рисунок*/
+.page-head {
+	background: url(../images/head-background.jpg) no-repeat;
+	background-size: cover;
+	background-position: top;
+	background-attachment: fixed;
+	height: 600px;	
+	z-index: -1;	
+}
+
+/* Задаем фоновый цвет с прозрачностью, 
+что бы фоновый рисунок выглядел тускнее*/
+.page-conteiner {
+	background-color: rgba(9, 20, 28, .4); 	
+	height: 100%;
+}
+
+/* Задаем стили для прелодера*/
+.loader {
+	background: none repeat scroll 0 0 @white;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+
+	&_inner {
+		background-image: url("../images/preloader.gif");
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-color: @white;
+		height: 300px;
+		width: 300px;
+		margin-top: -150px;
+		margin-left: -150px;
+		left: 50%;
+		top: 50%;
+		position: absolute;
+	}
+}
+
+/* задаем стили для Сендвич-меню */
+.toggle_mnu {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  z-index: 70;
+  border: none;
+  right: 50px;
+  top: 50px;
+  background-color: #222;
+	opacity: .9;
+	&:hover {
+  	opacity: 1;
+  	cursor: pointer;
+  }
+  & span {
+    display: block; 
+  }  
+}
+.sandwich {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 8px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 60; }
+
+.sw-topper {
+  position: relative;
+  top: 0;
+  width: 28px;
+  height: 3px;
+  background: white;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  transition: transform 0.5s, top 0.2s;
+  display: block; }
+
+.sw-bottom {
+  position: relative;
+  width: 28px;
+  height: 3px;
+  top: 6.6px;
+  background: white;
+  border: none;
+  border-radius: 4px 4px 4px 4px;  
+  transition: transform 0.5s, top 0.2s;
+  transition-delay: 0.2s, 0s; }
+
+.sw-footer {
+  position: relative;
+  width: 28px;
+  height: 3px;
+  top: 13.5px;
+  background: white;
+  border: none;
+  border-radius: 4px 4px 4px 4px;
+  transition: all 0.5s;  
+  transition-delay: 0.1s; }
+
+.sandwich.active .sw-topper {
+  top: 9px;
+  transform: rotate(-45deg);
+}
+
+.sandwich.active .sw-bottom {
+  top: 6px;
+  transform: rotate(45deg); 
+}
+
+.sandwich.active .sw-footer {
+  opacity: 0;
+  top: 0;
+  transform: rotate(180deg); 
+}
+
+/*Задаем стили для всплывающего меню*/
+.top_mnu {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.85);
+	z-index: 50;
+	right: 0;
+	top: 0;
+	display: none; 
+	& ul,
+	& li {
+		list-style-type: none;
+		padding: 0;
+		margin: 0; 
+	}
+	& ul {
+		margin-top: 180px;
+		text-align: center;
+		animation-duration: 0.01s;
+		& li:nth-child(2) a {
+			animation-delay: 0.1s; 
+		}
+		& li:nth-child(3) a {
+			animation-delay: 0.2s; 
+		}
+		& a {
+			color: @white;
+			display: block;
+			text-transform: uppercase;
+			font-size: 14px;
+			text-decoration: none;
+			position: relative;
+			height: 60px;
+			outline: none;
+		}
+		& a span {
+			display: block;
+			position: relative;
+			top: -40px;
+			left: 0;
+			height: 100%;
+			transition: all 0.5s ease; 
+		}
+		& span:hover {
+			background-color: rgba(255, 255, 255, 0.08);						 
+		}
+		& a:hover {
+			color: #A69BC2;	
+		}
+	}
+}
+
+/* Стили для Заголовка и подзаголовка */
+.page-head__title-conteiner {
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+  justify-content: center;
+  padding-top: 220px;
+
+}
+			
+.page-head__title	{
+  animation: fadeInDown 1.5s ease;  
+  padding-top: 70px; // задано для анимации, что бы было откуда выезжать
+	color: @white;
+	font-size: 40px;	
+	letter-spacing: 3px;
+	border: 7px solid @white;
+	padding: 15px 25px;
+	.title;
+}
+
+.page-head__subtitle {
+	animation: fadeInUp 1.5s ease;
+	animation-delay: 0.5s;
+	color: @white;	
+	padding-bottom: 70px; // задано для анимации, что бы было откуда выезжать
+	.title;
+}
+// Анимация на заголовок первого уровня
+@keyframes fadeInDown {
+  from {  	
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+  	opacity: 1;
+    transform: none;
+  }
+}
+// Анимация на подзаголовок 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+/**********************************
+			ВТОРОЙ ЭКРАН. Обо мне.
+**********************************/
+
+// Стили для заголовков секций
+.sections {
+	.section;
+	background-color: #fafafa;
+}
+
+.section-title,
+.section-subtitle {
+	.title;
+	letter-spacing: 1px;
+	color: #222;
+	font-size: 28px;
+	margin: 20px 0;
+}
+
+.section-subtitle {
+	font-size: 14px;
+	margin-bottom: 40px;
+	letter-spacing: 4px;
+	font-weight: lighter;
+}
+
+.string-line {
+	width: 200px;
+	color: #222;
+	background-color: #222;
+	margin-top: 30px;	
+}
+
+// Стили для флекс контейнера и содержимого, использую на 2 и 3 экранах
+.section-conteiner {
+	display: flex;	
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 70px;
+  letter-spacing: 1px;
+}
+
+.intoduce {	
+	flex-basis: 30%;
+	order: 3;
+	color: @gray;
+	&-title {
+		.sections-title;
+	}
+	&-content {
+		font-weight: 100;
+		font-size: 14px;
+		line-height: 1.5;
+		padding-bottom: 30px;
+	}	
+}
+
+.photo {
+	flex-basis: 30%;	
+	text-align: center;
+	order: 2;
+	color: @gray;
+	&-title {
+		.sections-title;
+	}
+	&-photography {
+		max-width: 250px;
+		display: inline-block;		
+		border-radius: 50%;
+	}
+}
+
+.info {
+	flex-basis: 30%;
+	order: 1;
+  color: @gray;
+	&-title {
+		.sections-title;
+	}
+	&-name {
+		font-size: 1.17em;
+		font-weight: 600;
+	}
+	&-list {
+		.list-items;
+	}
+	&-social {
+		display: inline-block;
+		font-size: 28px;			
+	}
+	&__tel {
+		text-decoration: none;
+	}
+}
+
+.fa-skype {
+	color: #00aced;
+	opacity: 0.8;	
+	
+}
+.fa-vk {
+	color: #45668e;
+	opacity: 0.8;	
+}
+.fa-facebook {
+	color: #3b5998;
+	opacity: 0.8;	
+}
+.fa-github {
+	color: #000;
+	opacity: 0.8;	
+}
+.fa-skype:hover,
+.fa-vk:hover,
+.fa-facebook:hover,
+.fa-github:hover {
+	opacity: 1;
+}
+
+/******************************************************
+				ТРЕТИЙ ЭКРАН СКИЛОВ И ПЛАНЫ САМОРАЗВИТИЯ
+*******************************************************/
+.my-skils {
+	background-color: #445162;	
+}
+
+.skils__title,
+.skils__subtitle {
+	color: @white;
+}
+
+.my-skils__string {
+	color: @white;
+	background-color: @white;
+}
+
+.icon-fonts {
+	.sections-title;
+	padding: 0;
+	color: @white;
+	font-size: 50px;
+}
+
+.prof-skils {
+	flex-basis: 30%;
+	&__title {
+		color: @white;
+		.sections-title;
+	}
+	&__list {
+		color: @white;		
+		.list-items;
+		list-style-type: decimal;
+		list-style-position: outside;		
+	}
+}
+
+.person-quality {
+	flex-basis: 30%;
+	&__title {
+		color: @white;
+		.sections-title;
+	}
+	&__list {
+		color: @white;		
+		.list-items;
+		list-style-type: decimal;
+		list-style-position: outside;		
+	}
+}
+
+.plans-evalutions {
+	flex-basis: 30%;
+	&__title {
+		color: @white;
+		.sections-title;
+	}
+	&__list {
+		color: @white;		
+		.list-items;
+		list-style-type: decimal;
+		list-style-position: outside;
+	}
+}
+
+
+/***********************************************
+				ЧЕТВЕРТЫЙ ЭКРАН ОБРАТНОЙ СВЯЗИ
+***********************************************/
+
+.contact {
+	&__form {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin: 50px 0 0;
+		margin-left: 30%;
+		margin-right: 30%;
+  	letter-spacing: 2px;
+	}
+	&__text-name,
+	&__text-email,
+	&__text-sms {
+		display: block;
+		width: 100%;
+	}
+
+
+	&__input-name,
+	&__input-email,
+	&__textarea {
+		display: block;
+		padding: 10px;
+		margin: 10px 0 40px;
+		font-size: 14px;
+		padding-left: 15px;
+		width: 100%;
+  	letter-spacing: 2px;
+	}
+	&__textarea{
+		height: 100px;
+	}
+	&__submit-wrap {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+	&__form-submit {
+		// background: #5E3124;
+		background: linear-gradient(to top, #5E3124, #B99489 );
+		border-color: #B99489;
+		border-bottom-color: #5E3124;
+		transition: background 0.05s linear;
+		opacity: .9;
+		box-shadow: 6px 6px 6px #999;
+		color: @white;
+		width: 150px;
+		padding: 10px;		
+	}
+	&__form-submit:hover {
+		opacity: 1;
+		cursor: pointer;
+	}
+	&__form-submit:active {
+	background: linear-gradient(to top, #B99489,  #5E3124);
+	box-shadow: 2px 2px 2px #777;
+	border-bottom:1px solid #5E3124;
+	transform: translateY(3px);
+	outline: none;
+	}
+	&__form-submit:focus 	{
+		opacity: 1;		
+	}
+}
+
+/*******************
+				ФУТЕР
+*******************/
+.page-footer {
+	margin-top: 70px; 
+	height: 50px;
+	background-color: #445162;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 0 100px;
+}
+
+.copy {	
+	letter-spacing: 1px;
+	font-size: 14px;
+	color: @white;
+}
+
+
+
+
