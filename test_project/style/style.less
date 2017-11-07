@@ -329,9 +329,6 @@ body {
 	&-btn:hover &-btn--arrow-img {
 		right: 22px;
 	}	
-
-
-
 	&__like-down--hover,
 	&__like-up--hover,
 	&__info,
@@ -379,9 +376,7 @@ body {
 		display: block;
 	}	
 }
-
 .material-icons.md-18 { font-size: 18px; }
-
 
 
 // Лайки которые вставляют по клику
@@ -421,54 +416,55 @@ body {
 
 
 //Стили для переключателя страниц
-.foot-nav {
-	display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  vertical-align: bottom;
+.foot-nav {	
+	align-items: center;
+	justify-content: center;
+	vertical-align: bottom;
 	padding-left: 52px;
 	padding-top: 46px;
-	
-}
-.foot-nav__link-pre {
-	font-family: "Averta-Semibold";
-	font-size: 12px;
-	text-transform: uppercase;
-	margin-top: 8px;
-	margin-left: 25px;
-	margin-right: 69px;
 	margin-bottom: 56px;
-	text-decoration: none;
-	vertical-align: middle;	
-	color: #c1c1c1;	
-	display: inline;
-}
-.foot-nav__list {
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-.foot-nav__list-item{
-	display: inline-block;
-	
-}
-.foot-nav__list-link {
-	text-decoration: none;
-	color: #c1c1c1;
-	font-family: "Averta-Regular";	
-	font-size: 12px;
-}
-.foot-nav__list-link:hover,
-.foot-nav__link-pre:hover {
-	color: @bg-main;	
+	&__list {
+		display: inline-flex;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	&__list-item {
+		display: inline-flex;
+		counter-increment: pagination;
+		
+	}
+	&__list-item:first-child &__list-link,
+	&__list-item:last-child &__list-link,
+	&__list-item:nth-child(2) &__list-link,
+	&__list-item:nth-child(3) &__list-link,
+	&__list-item:nth-child(4) &__list-link,
+	&__list-item:nth-child(5) &__list-link,
+	&__list-item:nth-child(6) &__list-link,
+	&__list-item:nth-child(7) &__list-link,
+	&__list-item:nth-child(8) &__list-link,
+	&__list-item:nth-child(9) &__list-link {
+		display: inline-block;
+		padding-right: 10px;
+	}
+	&__list-item:last-child &__list-link:before {
+  	content: "...";
+	}
+	&__list-link {
+		text-decoration: none;
+		color: #c1c1c1;
+		font-family: "Averta-Regular";	
+		font-size: 12px;
+		display: none;
+	}
+	&__list-link:after {
+  	content: " " counter(pagination) " ";
+	}
+	&__list-link:hover {
+		color: @bg-main;	
+	}
 }
 
-.foot-nav__link-next {
-	.link-more;
-	background-position: 100% 10%;
-	margin-left: 69px;
-}
 
 
 /*----------------------------------------
@@ -566,8 +562,8 @@ body {
 	}
 }
 
-//Ссылка под блоком топ бомже - "показать всех"
-.link-more {
+//Кнопка под блоком топ бомже - "показать всех", она же и для кнопок возле каунтера страниц
+.btn-more {
 	font-family: "Averta-Semibold";
 	font-size: 12px;
 	text-transform: uppercase;
@@ -584,24 +580,36 @@ body {
 	transition: color liner .5s;
 
 	&:hover .arrow_forward,
-	&:hover .sidebar-freelancers__link {
+	&:hover .btn-more__link {
 		color: @bg-main;
 	}
 }
-.sidebar-freelancers__link {
+.btn-next {
+	margin: 0 0 0 70px;
+}
+.btn-prev {
+	.btn-more;
+	margin: 0 70px 0 0;
+	padding: 0;
+	&:hover .arrow_back,
+	&:hover .btn-prev__link {
+		color: @bg-main;		
+	}
+}
+.btn-more__link,
+.btn-prev__link {
 	text-decoration: none;
 	color: #c1c1c1;
 	padding-right: 4px;
 	.linear-anime;
 }
-
+// выравниваем иконки в ровень с текстом
 .material-icons {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   vertical-align: bottom;
 	.linear-anime;
-
 }
 .material-icons.md-16 {
 	font-size: 16px;
