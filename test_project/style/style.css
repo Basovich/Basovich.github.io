@@ -291,7 +291,7 @@ body {
   display: none;
 }
 .card {
-  transition: all linear .5s;
+  transition: all linear;
 }
 .card:hover {
   width: 544px;
