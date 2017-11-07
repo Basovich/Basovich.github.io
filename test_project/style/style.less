@@ -5,7 +5,11 @@
 
 
 
+
 /* MIXIN */
+.linear-anime() { 
+	transition: all linear .5s;
+}
 
 .subtitle() {
 	font-family: "Averta-Semibold";
@@ -30,45 +34,40 @@
 
 /*------------------
 	 Default styles
-	 -------------------*/
-	 * {
-	 	box-sizing: border-box;	
-	 }
-	 html,
-	 body {
-	 	padding: 0;
-	 	margin: 0;
-	 }
+-------------------*/
+* {
+	box-sizing: border-box;	
+}
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
 
 
 
 /*--------------------------------------------
 		Flexbox layout with separate sidebar
-		---------------------------------------------*/
+---------------------------------------------*/
 
-		.header {
-			display: flex;
-			align-items: center;
-			height: 120px;
-			justify-content: space-between;
-			background: @bg-menu_aside;
-			font-size: 14px;
-			position: relative;
-			z-index: 10;
-			font-family: "Averta-Regular";
-		}
-		.content-wrapper {
-			display: flex;
-  // overflow: hidden;
-  height: 100vh;
-  margin-top: -120px;
-  padding-top: 120px;
-  position: relative;
-  min-width: 1300px;
-
-  // width: 100%;
-  // backface-visibility: hidden;
-  // will-change: overflow;
+.header {
+	display: flex;
+	align-items: center;
+	height: 120px;
+	justify-content: space-between;
+	background: @bg-menu_aside;
+	font-size: 14px;
+	position: relative;
+	z-index: 10;
+	font-family: "Averta-Regular";
+}
+.content-wrapper {
+	display: flex;
+	height: 100vh;
+	margin-top: -120px;
+	padding-top: 120px;
+	position: relative;
+	min-width: 1300px;
 }
 .sidebar,
 .wrap {
@@ -97,7 +96,7 @@
 
 /*----------------------------------------
 	Styles for the header (logo and menu)
-	-----------------------------------------*/
+-----------------------------------------*/
 
 // Logo.
 .logo-conteiner {
@@ -114,13 +113,20 @@
 .menu {
 	display: flex;
 	align-items: center;
-	&__link{
+	&__link {
 		text-decoration: none;
 		color: #000;
 		padding-right: 20px;
-		&:first-child {
-			color: @bg-main;
-		}
+		.linear-anime;
+	}
+	&__link:hover {
+		color: @bg-main;		
+	}
+	&__li {
+		.linear-anime;		
+	}	
+	&__li:hover {
+		color: @bg-main;		
 	}
 	&__link-user {
 		display: flex;
@@ -128,7 +134,7 @@
 		text-decoration: none;
 		color: #000;
 		padding-right: 50px;
-		transition: color .5s;
+		.linear-anime;
 		&:hover	{
 			color: @bg-main;		
 		}
@@ -140,7 +146,7 @@
 			border-radius: 50%;
 			width: 33px;
 			height: 33px;
-			transition: box-shadow .5s;			
+			.linear-anime;		
 		}
 	}		
 }
@@ -318,7 +324,7 @@
 		position: absolute;
 		top: calc(50% - 7px);
 		right: calc(50% - 20px);
-		transition: right linear .5s;
+		.linear-anime;
 	}
 	&-btn:hover &-btn--arrow-img {
 		right: 22px;
@@ -336,7 +342,7 @@
 }
 
 .card {
-	transition: all linear .1s;
+	.linear-anime;
 	// overflow: hidden;
 	&:hover {
 		width: 544px;
@@ -416,27 +422,26 @@
 
 //Стили для переключателя страниц
 .foot-nav {
-	display: inline-block;
+	display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: bottom;
 	padding-left: 52px;
 	padding-top: 46px;
+	
 }
-
 .foot-nav__link-pre {
 	font-family: "Averta-Semibold";
 	font-size: 12px;
 	text-transform: uppercase;
-	padding-top: 8px;
-	padding-left: 25px;
-	padding-right: 69px;
-	padding-bottom: 56px;
+	margin-top: 8px;
+	margin-left: 25px;
+	margin-right: 69px;
+	margin-bottom: 56px;
 	text-decoration: none;
-	color: @bg-main;
+	vertical-align: middle;	
+	color: #c1c1c1;	
 	display: inline;
-	vertical-align: middle;
-	background: url(../icon/arrow_back.png) no-repeat;
-	background-position: 0% 10%;
-	background-size: 18px;
-	color: #c1c1c1;
 }
 .foot-nav__list {
 	display: inline-block;
@@ -453,19 +458,18 @@
 	color: #c1c1c1;
 	font-family: "Averta-Regular";	
 	font-size: 12px;
-
 }
+.foot-nav__list-link:hover,
+.foot-nav__link-pre:hover {
+	color: @bg-main;	
+}
+
 .foot-nav__link-next {
 	.link-more;
 	background-position: 100% 10%;
-	padding-left: 69px;
+	margin-left: 69px;
 }
-.first {
-	color: #5ea6ce;
-}
-.five {
-	color: #000;
-}
+
 
 /*----------------------------------------
 				Styles for the block sidebar
@@ -483,7 +487,8 @@
 	font-size: 14px;	
 	display: block;
 	margin-left: 52px;
-	padding-bottom: 16px;	
+	padding-bottom: 16px;
+	margin-right: 60px;	
 	cursor: pointer;
 	position: relative;
 	padding-left: 24px;	
@@ -498,7 +503,7 @@
 	border-radius: 2px;
 	left: 0;
 	top: 2px;
-	transition: background-color .5s;		
+	.linear-anime;	
 
 }
 .checkbox:checked + .checkbox-toggle:before {
@@ -533,7 +538,7 @@
 	color: #000;
 	padding-left: 52px;
 	padding-bottom: 18px;
-	transition: color .5s;
+	.linear-anime;
 	&:hover &__img {
 		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);		
 	}
@@ -542,7 +547,7 @@
 		height: 36px;
 		margin-right: 17px;
 		border-radius: 50%;
-		transition: box-shadow .5s;		
+		.linear-anime;		
 	}
 	&__name {
 		font-family: "Averta-Regular";
@@ -560,19 +565,44 @@
 		color: @bg-main;		
 	}
 }
+
+//Ссылка под блоком топ бомже - "показать всех"
 .link-more {
 	font-family: "Averta-Semibold";
 	font-size: 12px;
 	text-transform: uppercase;
-	padding-top: 8px;
-	padding-left: 102px;
-	padding-right: 28px;
-	padding-bottom: 56px;
+	margin-top: 8px;
+	margin-left: 102px;
+	margin-right: 28px;
+	margin-bottom: 56px;
 	text-decoration: none;
-	color: @bg-main;
-	display: inline;
-	vertical-align: middle;
-	background: url(../icon/arrow_forward.png) no-repeat;
-	background-position: 100% 10%;
-	background-size: 18px;
+	color: #c1c1c1;
+	padding-left: 0;
+	background-color: @bg-menu_aside;
+	border: @bg-menu_aside;
+	outline: none;
+	transition: color liner .5s;
+
+	&:hover .arrow_forward,
+	&:hover .sidebar-freelancers__link {
+		color: @bg-main;
+	}
+}
+.sidebar-freelancers__link {
+	text-decoration: none;
+	color: #c1c1c1;
+	padding-right: 4px;
+	.linear-anime;
+}
+
+.material-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: bottom;
+	.linear-anime;
+
+}
+.material-icons.md-16 {
+	font-size: 16px;
 }
