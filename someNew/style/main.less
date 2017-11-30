@@ -1,0 +1,397 @@
+/**********************************************
+                 *** ПЕРЕМЕННЫЕ ***
+**********************************************/
+@dark-blue: #3f35a5;
+@lite-blue: #5AB8EB;
+
+
+/**********************************************
+                 *** МИКСИНЫ ***
+**********************************************/
+
+// Фоновые картинки
+.bgimages() {
+  background-size: cover;
+  height: 57.803vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+// Заголовки на фоновых картинках
+.bgimages-title() {
+  margin: 0;
+  padding-left: 92px;
+  padding-top: 27.745vh;
+  font-size: 48px;
+  color: @dark-blue;
+  font-family: 'Nexa', serif;
+  font-weight: bold;
+}
+
+// Стили для статичных кнопок
+.btn-static() {
+  font-family: 'Nexa', serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: lowercase;
+  border: 1px solid @dark-blue;
+  color: @dark-blue;
+  text-decoration: none;
+  padding: 9px 16px;
+  border-radius: 32px;
+  margin-left: 16px;
+  transition: all linear .2s;
+}
+
+// Стили для кнопок с ховером
+.btn-hover() {
+  background-color: @dark-blue;
+  color: #fff;
+}
+
+
+/**********************************************
+                 *** ОБЩИЕ ***
+**********************************************/
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Nexa', serif;
+}
+
+
+/**********************************************
+                 *** МЕНЮ ***
+**********************************************/
+.menu {
+  display: flex;
+  position: fixed;
+  height: 100px;
+  padding-right: 92px;
+  z-index: 10;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+}
+
+// Логотип
+.logo-wrap {
+  display: block;
+  margin: 26px 0 26px 92px;
+  padding: 0;
+  align-self: center;
+  z-index: 10;
+}
+
+.logo {
+  height: 48px;
+  margin-bottom: -3px;
+}
+
+// Новигация
+.navigation {
+  margin-right: 92px;
+  align-self: center;
+  &-item {
+    .btn-static;
+  }
+  &-item:hover,
+  &-item:first-child {
+    .btn-hover;
+  }
+}
+.navigation::before {
+  background-color: #fff;
+  position: fixed;
+  height: 72px;
+  width: 100%;
+  }
+
+// Гамбургер (с 1300пкс)
+.navbar-toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  margin-right: 92px;
+  align-self: center;
+  vertical-align: middle;
+  display: none;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 100%;
+  height: 3px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: @dark-blue;
+  transition: all 0.3s ease-in-out;
+}
+
+.bar3 {
+  margin-bottom: 10px;
+}
+.navbar-on .bar1,
+.navbar-on .bar2,
+.navbar-on .bar3 { background-color: @dark-blue; }
+
+.navbar-on .bar1 {
+  transform-origin: 4% 40%;
+  transform: rotate(45deg);
+}
+
+.navbar-on .bar3 {
+  transform-origin: 0 40%;
+  transform: rotate(-45deg);
+}
+
+.navbar-on .bar2 {
+  background-color: transparent;
+}
+
+
+/**********************************************
+            *** Стрелки СЛАЙДЕРА ***
+**********************************************/
+.horizon-prev,
+.horizon-next {
+  position: fixed;
+  bottom: 50%;
+  margin-top: -24px;
+  z-index: 100;
+  cursor: pointer;
+}
+.horizon-prev {
+  left: 92px;
+}
+.horizon-next {
+  right: 92px;
+}
+
+
+
+/**********************************************
+                 *** СЛАЙДЕР ***
+**********************************************/
+
+.slider {
+  float: left;
+  display: block;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  // Заголовок слайдеров
+  &__title {
+    .bgimages-title;
+    .bgimages-title;
+  }
+  &__hide-title {
+    display: none;
+  }
+
+  // Текстовый блок
+  &__content {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 68.814vw;
+    margin-top: 48px;
+    margin-left: 92px;
+    font-size: 14px;
+    overflow: hidden;
+    //делаем блоки с текстом невидимыми, что бы при прокрутке слайдера
+    // при прокрутке по ссылка было невидно текст "пролетающих" блоков
+    opacity: 0;
+    &--show {
+      opacity: 1;
+    }
+
+    // Стили для текста
+    &-text {
+      flex-basis: 50%;
+      &-link {
+        color: @lite-blue;
+        text-decoration: none;
+      }
+    }
+    &-text:first-child {
+      padding-right: 22px;
+    }
+
+    // Стили для кнопки
+    &-btn {
+      .btn-static;
+      background-color: @lite-blue;
+      margin-left: 0;
+      color: #fff;
+      border: @lite-blue;
+      margin-top: 16px;
+    }
+    &-btn:hover {
+      .btn-hover;
+    }
+  }
+
+  // Навигаця слайдера по ссылкам
+  &-nav {
+    position: fixed;
+    z-index: 1111;
+    right: 92px;
+    top: 64.803vh;
+
+    &__list {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      text-decoration: none;
+      text-align: right;
+      font-family: 'Nexa', serif;
+      font-size: 14px;
+      font-weight: bold;
+      color: @lite-blue;
+      cursor: pointer;
+    }
+    &__list li {
+      transition: all linear .2s;
+    }
+    &__list li:hover {
+      color: @dark-blue;
+    }
+    &__list-item--active {
+      color: @dark-blue;
+    }
+  }
+}
+
+// Задаем первому текстовому блоку видимость, что бы его было изначально видно.
+.active {
+  opacity: 1;
+}
+
+.slider-block1 {
+  background: url(../img/bgimg/bg_home_1.jpg) center no-repeat;
+  .bgimages;
+
+}
+
+.slider-block2 {
+  background: url(../img/bgimg/bg_home_2.jpg) center no-repeat;
+  .bgimages;
+}
+
+.slider-block3 {
+  background: url(../img/bgimg/bg_home_3.jpg) center no-repeat;
+  .bgimages;
+}
+
+.slider-block4 {
+  background: url(../img/bgimg/bg_home_4.jpg) center no-repeat;
+  .bgimages;
+}
+
+.slider-block5 {
+  background: url(../img/bgimg/bg_home_5.jpg) center no-repeat;
+  .bgimages;
+}
+
+.slider-block6 {
+  background: url(../img/bgimg/bg_home_6.jpg) center no-repeat;
+  .bgimages;
+}
+
+.slider-block7 {
+  background: url(../img/bgimg/bg_home_7.jpg) center no-repeat;
+  .bgimages;
+}
+
+.slider-block8 {
+  background: url(../img/bgimg/bg_home_8.jpg) center no-repeat;
+  .bgimages;
+}
+
+.slider-block {
+  background: #fff;
+}
+
+
+/***********************************************
+   *** ПОЛОСКА ИНДИКАТОР АКТИВНОЙ КАРТИНК ***
+***********************************************/
+
+//СКРОЛ-БАР
+.view-scroll {
+  display: flex;
+  position: fixed;
+  margin-left: 92px;
+  width: ~"calc(100% - 184px)";
+  top: ~"calc(57.803vh - 4px)";
+  z-index: 200;
+}
+.scroll-str {
+  flex-basis: 12.5%;
+  height: 4px;
+  background-color: @lite-blue;
+}
+.scroll-str--active {
+  background-color: @dark-blue;
+}
+
+// Видим его только на мобильной версии
+.scroll-string-indicator {
+  display: none;
+}
+
+
+/***********************************************
+                  *** FOOTER ***
+***********************************************/
+
+.footer-page {
+  position: fixed;
+  bottom: 48px;
+  right: 92px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+// Ссылки на контакты и соглашения
+.privacy-link {
+  margin-right: 32px;
+}
+
+.privacy-link__contact,
+.privacy-link__privacy,
+.privacy-link__terms {
+  font-family: 'Nexa', serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: @dark-blue;
+}
+
+// Ссылки на соцсети
+.social-link__fb,
+.social-link__inst,
+.social-link__twit {
+  text-decoration: none;
+  color: @dark-blue;
+  width: 16px;
+  height: 16px;
+  margin-left: 12px;
+}
+// Второй блок с ссылками на соц сети для меню на мобильниках
+.wrap-nav-link {
+  display: none;
+}
