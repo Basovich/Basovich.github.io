@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,57 +8,51 @@
     <title>NEMONDO</title>
     <link rel="stylesheet" href="style/normalize.min.css">
     <link rel="stylesheet" href="style/font.min.css">
-    <link href="style/main.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.min.css">
+    <link rel="stylesheet" href="style/media.min.css">
+
 </head>
 <body>
 <header class="menu">
     <figure class="logo-wrap">
-        <a href="#" class="logo-link">
+        <a href="index.html" class="logo-link">
             <img class="logo" src="img/logo.png" alt="Logo Nemondo">
         </a>
     </figure>
-    <nav class="navigation">
+    <nav class="navigation responsive">
         <a href="#" class="navigation-item">home</a>
         <a href="#" class="navigation-item">buy/sell crypto</a>
         <a href="#" class="navigation-item">wallet & escrow</a>
         <a href="#" class="navigation-item">crypto mining</a>
         <a href="#" class="navigation-item">nemondo coin</a>
-        <a href="#" class="navigation-item">contact</a>
+        <a href="#" class="navigation-item navigation-item--last">contact</a>
+        <div class="wrap-nav-link">
+            <div class="privacy-link--mob">
+                <a href="#" class="privacy-link__contact">Contact/</a>
+                <a href="#" class="privacy-link__privacy">Privacy/</a>
+                <a href="#" class="privacy-link__terms">Terms</a>
+            </div>
+            <div class="social-link--mob">
+                <a href="https://www.facebook.com/Nemondo-Group-156064444983581/" class="social-link__fb" rel="noopener"
+                   target="_blank">
+                    <img src="img/icons/facebook.png" alt="Facebook" class="social-link__fb-icon">
+                </a>
+                <a href="https://www.instagram.com/nemondogroup/" class="social-link__inst" rel="noopener"
+                   target="_blank">
+                    <img src="img/icons/instagram.png" alt="Instagram" class="social-link__inst-icon">
+                </a>
+                <a href="https://twitter.com/nemondo" class="social-link__twit" rel="noopener" target="_blank">
+                    <img src="img/icons/twitter.png" alt="Twitter" class="social-link__twit-icon">
+                </a>
+            </div>
+        </div>
     </nav>
+    <div class="navbar-toggle" title="Menu">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
 </header>
-
-<div class="horizon-prev">
-    <img src="img/arrow-previous.png">
-</div>
-<div class="horizon-next">
-    <img src="img/arrow-next.png">
-</div>
-
-<section class="scroll-img" data-role="section" id="section-section1">
-    <h1 class="scroll-img__title">About Nemondo.</h1>
-</section>
-<section class="scroll-img" data-role="section" id="section-section2">
-    <h1 class="scroll-img__title">Our mission.</h1>
-</section>
-<section class="scroll-img" data-role="section" id="section-section3">
-    <h1 class="scroll-img__title">Why us?</h1>
-</section>
-<section class="scroll-img" data-role="section" id="section-section4">
-    <h1 class="scroll-img__title">Buy or sell crypto with us.</h1>
-</section>
-<section class="scroll-img" data-role="section" id="section-section5">
-    <h1 class="scroll-img__title">Try our wallet & escrow.</h1>
-</section>
-<section class="scroll-img" data-role="section" id="section-section6">
-    <h1 class="scroll-img__title">Check out our mining rigs.</h1>
-</section>
-<section class="scroll-img" data-role="section" id="section-section7">
-    <h1 class="scroll-img__title">Nemondo Coin.</h1>
-</section>
-<section class="scroll-img" data-role="section" id="section-section8">
-    <h1 class="scroll-img__title">Get in touch.</h1>
-</section>
-
 <div class="view-scroll">
     <div class="scroll-str scroll-str-item1  scroll-str--active"></div>
     <div class="scroll-str scroll-str-item2"></div>
@@ -69,43 +63,228 @@
     <div class="scroll-str scroll-str-item7"></div>
     <div class="scroll-str scroll-str-item8"></div>
 </div>
-
-
-<section class="wrap-content">
-    <article class="text-block--1">
-        <p class="text-block--text1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+<section class="slider" data-role="section">
+    <div id="section-section1" class="slider-block1">
+        <h1 class="slider__title  title1">About Nemondo.</h1>
+        <div class="scroll-string-indicator">
+            <div class="scroll-str scroll-str--active"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+        </div>
+    </div>
+    <article class="slider__content slider__content1 slider__content--show">
+        <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
             euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
             nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
             vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
-    </article>
-    <article class="text-block--2">
-        <p class="text-block--text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+        <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
             euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
             nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis <a
-                    class="text-block__link" href="#">autem vel eum</a> iriure dolor in hendrerit in vulputate velit
+                    class="slider__content-text-link" href="#">autem vel eum</a> iriure dolor in hendrerit in vulputate velit
             esse.</p>
-        <p class="text-block--btn-buy-sell">Ready to go?
+    </article>
+</section>
+<section class="slider" data-role="section">
+    <div id="section-section2" class="slider-block2">
+        <h1 class="slider__title title2">Our mission.</h1>
+        <div class="scroll-string-indicator">
+            <div class="scroll-str"></div>
+            <div class="scroll-str scroll-str--active"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+        </div>
+    </div>
+    <article class="slider__content slider__content2">
+        <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+            vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+        <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis <a
+                    class="slider__content-text-link" href="#">autem vel eum</a> iriure dolor in hendrerit in vulputate velit
+            esse.</p>
+    </article>
+</section>
+<section class="slider" data-role="section">
+    <div id="section-section3" class="slider-block3">
+        <h1 class="slider__title title3">Why us?</h1>
+        <div class="scroll-string-indicator">
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str scroll-str--active"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+        </div>
+    </div>
+    <article class="slider__content slider__content3">
+        <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+            vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+        <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis <a
+                    class="slider__content-text-link" href="#">autem vel eum</a> iriure dolor in hendrerit in vulputate velit
+            esse.</p>
+    </article>
+</section>
+<section class="slider" data-role="section">
+    <div id="section-section4" class="slider-block4">
+        <h1 class="slider__title title4">Buy or sell crypto with us.</h1>
+        <div class="scroll-string-indicator">
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str scroll-str--active"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+        </div>
+    </div>
+    <article class="slider__content slider__content4">
+        <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+            vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+        <p class="slider__content-text slider__content-text-btn">Ready to go?
             <br>
-            <br>
-            <br>
-            <a href="#" class="btn-buy-sell-coins">Buy or sell some coins.</a>
+            <button class="slider__content-btn">Buy or sell some coins.</button>
         </p>
     </article>
-    <nav class="slider-nav">
-        <ul class="slider-nav__list">
-            <li class="slider-nav__item slider-nav__list-item--active">About Nemondo.</li>
-            <li class="slider-nav__item">Our mission.</li>
-            <li class="slider-nav__item">Why us?</li>
-            <li class="slider-nav__item">Buy or sell crypto with us.</li>
-            <li class="slider-nav__item">Try our wallet & escrow.</li>
-            <li class="slider-nav__item">Check out our mining rigs.</li>
-            <li class="slider-nav__item">Nemondo Coin.</li>
-            <li class="slider-nav__item">Get in touch.</li>
-        </ul>
-    </nav>
 </section>
-
+<section class="slider" data-role="section">
+    <div id="section-section5" class="slider-block5">
+        <h1 class="slider__title title5">Try our wallet & escrow.</h1>
+        <div class="scroll-string-indicator">
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str scroll-str--active"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+        </div>
+    </div>
+    <article class="slider__content slider__content5">
+        <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+            vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+        <p class="slider__content-text slider__content-text-btn">Ready to go?
+            <br>
+            <button class="slider__content-btn">Buy or sell some coins.</button>
+        </p>
+    </article>
+</section>
+<section class="slider" data-role="section">
+    <div id="section-section6" class="slider-block6">
+        <h1 class="slider__title title6">Check out our mining rigs.</h1>
+        <div class="scroll-string-indicator">
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str scroll-str--active"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+        </div>
+    </div>
+    <article class="slider__content slider__content6">
+        <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+            vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+        <p class="slider__content-text slider__content-text-btn">Ready to go?
+            <br>
+            <button class="slider__content-btn">Buy or sell some coins.</button>
+        </p>
+    </article>
+</section>
+<section class="slider" data-role="section">
+    <div id="section-section7" class="slider-block7">
+        <h1 class="slider__title title7">Nemondo Coin.</h1>
+        <div class="scroll-string-indicator">
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str scroll-str--active"></div>
+            <div class="scroll-str"></div>
+        </div>
+    </div>
+    <article class="slider__content slider__content7">
+        <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+            vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+        <p class="slider__content-text slider__content-text-btn">Ready to go?
+            <br>
+            <button class="slider__content-btn">Buy or sell some coins.</button>
+        </p>
+    </article>
+</section>
+<section class="slider" data-role="section">
+    <div id="section-section8" class="slider-block8">
+        <h1 class="slider__title title8">Get in touch.</h1>
+        <div class="scroll-string-indicator">
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str"></div>
+            <div class="scroll-str scroll-str--active"></div>
+        </div>
+    </div>
+    <article class="slider__content slider__content8">
+        <p class="slider__content-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+            nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
+            vel eum iriure dolor in hendrerit in vulputate velit esse.</p>
+        <p class="slider__content-text slider__content-text-btn">Ready to go?
+            <br>
+            <button class="slider__content-btn">Buy or sell some coins.</button>
+        </p>
+    </article>
+</section>
+<nav class="slider-nav">
+    <ul class="slider-nav__list">
+        <li class="slider-nav__item slider-nav__list-item--active">About Nemondo.</li>
+        <li class="slider-nav__item">Our mission.</li>
+        <li class="slider-nav__item">Why us?</li>
+        <li class="slider-nav__item">Buy or sell crypto with us.</li>
+        <li class="slider-nav__item">Try our wallet & escrow.</li>
+        <li class="slider-nav__item">Check out our mining rigs.</li>
+        <li class="slider-nav__item">Nemondo Coin.</li>
+        <li class="slider-nav__item">Get in touch.</li>
+    </ul>
+</nav>
 <footer class="footer-page">
+    <div class="horizon-prev">
+        <img src="img/arrow-previous.png">
+    </div>
+    <div class="horizon-next">
+        <img src="img/arrow-next.png">
+    </div>
     <div class="privacy-link">
         <a href="#" class="privacy-link__contact">Contact/</a>
         <a href="#" class="privacy-link__privacy">Privacy/</a>
@@ -124,11 +303,25 @@
         </a>
     </div>
 </footer>
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/jquery.touchSwipe.min.js"></script>
 <script src="js/jquery.horizonScroll.min.js"></script>
-<script src="js/scrollGoOn.min.js"></script>
+<script src='js/navbar.min.js'></script>
+<script src='js/sticky_menu.js'></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            window.innerWidth >= 768 && $(".slider").horizon();
+        });
+        $( window ).resize(function() {
+            if(window.innerWidth >= 768){
+                $(".slider").horizon();
+            }else{
+                $.fn.horizon = function () {};
+                $(".slider").horizon();
+            }
+        });
+    }(jQuery));
+</script>
 </body>
 </html>
