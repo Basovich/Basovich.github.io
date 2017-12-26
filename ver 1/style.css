@@ -1,0 +1,38 @@
+body {
+    height: 2000px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+.conteiner {
+    margin: 0 auto;
+    width: 98.5vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+#video_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .6;
+}
+.title {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    color: #fff;
+    z-index: 1;
+}
