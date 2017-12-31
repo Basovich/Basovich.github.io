@@ -936,32 +936,32 @@ object {
 /*Еще один эфект на хувер для меню*/
 /*#menu-topmenu .menu-item a:before,*/
 /*#menu-topmenu .menu-item a:after {*/
-/*-webkit-transition: all 0.35s ease;*/
-/*transition: all 0.35s ease;*/
-/*height: 2px;*/
-/*width: 35%;*/
-/*background-color: #d3af55;*/
-/*position: absolute;*/
-/*content: '';*/
-/*opacity: 0;*/
+	/*-webkit-transition: all 0.35s ease;*/
+	/*transition: all 0.35s ease;*/
+	/*height: 2px;*/
+	/*width: 35%;*/
+	/*background-color: #d3af55;*/
+	/*position: absolute;*/
+	/*content: '';*/
+	/*opacity: 0;*/
 /*}*/
 /*#menu-topmenu .menu-item a:before {*/
-/*top: 0;*/
-/*left: 0;*/
+	/*top: 0;*/
+	/*left: 0;*/
 /*}*/
 /*#menu-topmenu .menu-item a:after {*/
-/*bottom: 0;*/
-/*right: 0;*/
+	/*bottom: 0;*/
+	/*right: 0;*/
 /*}*/
 /*#menu-topmenu .menu-item a:hover:before,*/
 /*#menu-topmenu .menu-item a:hover:after {*/
-/*opacity: 1;*/
+	/*opacity: 1;*/
 /*}*/
 /*#menu-topmenu .menu-item a:hover:before {*/
-/*left: 65%;*/
+	/*left: 65%;*/
 /*}*/
 /*#menu-topmenu .menu-item a:hover:after {*/
-/*right: 65%;*/
+	/*right: 65%;*/
 /*}*/
 
 
