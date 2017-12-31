@@ -1255,38 +1255,17 @@ object {
 		transition: all .5s;
 		letter-spacing: 2px;
 	}
-	#menu-topmenu .menu-item a::after {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0;
-		height: 2px;
-		background-color: #d3af55;
-		transition: all .3s;
-	}
-	#menu-topmenu .menu-item a:hover::after {
-		width: 100%;
-	}
-
 	#menu-topmenu .menu-item a:hover {
 		background-color: #4c6881;
 		border-radius: 0;
 		color: #d3af55;
 
-	}
-
-	#menu-topmenu .menu-item a:hover {
-		/*background-color: #d3af55;*/
-		/*color: #4c6881;*/
-		border: 1px solid transparent;
 	}
 	#menu-topmenu .current-menu-item a {
 		opacity: 1;
 		background-color: #4c6881;
 		border-radius: 0;
 		color: #d3af55;
-		border-color: transparent;
 	}
 	#menu-topmenu {
 		display: block;
