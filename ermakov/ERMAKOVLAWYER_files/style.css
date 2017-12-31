@@ -41,6 +41,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+* {
+	box-sizing: border-box;
+}
+
 html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -925,12 +929,13 @@ object {
 #menu-topmenu .menu-item a {
 	padding: 10px 15px;
 	margin-right: 5px;
-	border-radius: 5px;
+	border: 1px solid transparent;
 	transition: all .5s;
 }
 #menu-topmenu .menu-item a:hover {
-	background-color: #d3af55;
-	color: #4c6881;
+	/*background-color: #d3af55;*/
+	/*color: #4c6881;*/
+	border: 1px solid #d3af55;
 }
 
 /*Еще один эфект на хувер для меню*/
@@ -964,15 +969,51 @@ object {
 	/*right: 65%;*/
 /*}*/
 
+/* и еще один ефект на ховер*/
+/*#menu-topmenu a:before,*/
+/*#menu-topmenu a:after {*/
+	/*height: 14px;*/
+	/*width: 14px;*/
+	/*position: absolute;*/
+	/*content: '';*/
+	/*transition: all 0.35s ease;*/
+	/*opacity: 0;*/
+/*}*/
+/*#menu-topmenu a:before {*/
+	/*right: 0;*/
+	/*top: 0;*/
+	/*border-right: 1px solid #d3af55;*/
+	/*border-top: 1px solid #d3af55;*/
+	/*transform: translate(-100%, 50%);*/
+/*}*/
+/*#menu-topmenu a:after {*/
+	/*left: 0;*/
+	/*bottom: 0;*/
+	/*border-left: 1px solid #d3af55;*/
+	/*border-bottom: 1px solid #d3af55;*/
+	/*-webkit-transform: translate(100%, -50%);*/
+	/*transform: translate(100%, -50%);*/
+/*}*/
+/*#menu-topmenu a:hover {*/
+	/*opacity: 1;*/
+/*}*/
+/*#menu-topmenu a:hover:before,*/
+/*#menu-topmenu a:hover:after {*/
+	/*-webkit-transform: translate(0%, 0%);*/
+	/*transform: translate(0%, 0%);*/
+	/*opacity: 1;*/
+/*}*/
+
 
 .menu-item a:hover {
 	opacity: 1;
 }
 #menu-topmenu .current-menu-item a {
 	opacity: 1;
-	background-color: #d3af55;
-	border-radius: 5px;
-	color: #4c6881;
+	/*background-color: #d3af55;*/
+	/*border-radius: 5px;*/
+	/*color: #4c6881;*/
+	border: 1px solid #d3af55;
 }
 .current-menu-item a {
 	opacity: 1;
