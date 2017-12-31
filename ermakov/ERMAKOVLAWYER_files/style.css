@@ -1276,11 +1276,17 @@ object {
 
 	}
 
+	#menu-topmenu .menu-item a:hover {
+		/*background-color: #d3af55;*/
+		/*color: #4c6881;*/
+		border: 1px solid transparent;
+	}
 	#menu-topmenu .current-menu-item a {
 		opacity: 1;
 		background-color: #4c6881;
 		border-radius: 0;
 		color: #d3af55;
+		border-color: transparent;
 	}
 	#menu-topmenu {
 		display: block;
@@ -1318,6 +1324,7 @@ object {
 	.footer {
 		padding-left: 50px;
 	}
+
 
 }
 
