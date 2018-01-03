@@ -1155,7 +1155,7 @@ object {
 }
 
 /*
-		Медиазапросы дял подвали и шапки
+		Медиазапросы для подвали и шапки
 ------------------------------------------------*/
 
 @media only screen and (max-width: 950px) {
@@ -1228,6 +1228,11 @@ object {
 		color: #d3af55;
 	}
 }
+@media only screen and (max-width: 768px) {
+	.headroom {
+		padding: 10px 40px;
+	}
+}
 
 @media only screen and (max-width: 550px) {
 	.headroom {
@@ -1268,6 +1273,28 @@ object {
 	width: 100%;
 	background-color: #4c6881;
 }
+.video-bg-block {
+	position: absolute;
+	top: 13vh;
+	right: 5%;
+	bottom: 10vh;
+	z-index: 1;
+	width: 75vw;
+	height: 75vh;
+	overflow: hidden;
+	background-color: #242C3D;
+}
+.video-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	border-bottom: 1px solid transparent;
+	object-fit: cover;
+}
 .subtitle-page {
 	position: absolute;
 	top: 25vh;
@@ -1289,13 +1316,14 @@ object {
 .btn-consultation {
 	z-index: 99;
 	position: absolute;
-	top: 71vh;
+	top: 72vh;
 	left: 10vw;
 	text-transform: uppercase;
 	background-color: transparent;
 	color: #d3af55;
 	padding: 15px;
 	border: 1px solid #d3af55;
+	border-radius: 0;
 	font-size: 16px;
 	transition: all .4s ease-in;
 }
@@ -1304,11 +1332,33 @@ object {
 	color: #4c6881;
 	border-color: #d3af55;
 }
-.video-bg {
-	position: absolute;
-	right: 5vw;
-	top: 100px;
-	width: 62vw;
+/*
+		Медиазапросы
+-----------------------------*/
+@media only screen and (max-width: 767px) {
+	.row-home-bg-video {
+		background: url("image/pexels-photo-196659.jpeg") center no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+	.video-bg-block,
+	.video-bg {
+		display: none;
+	}
+}
+@media only screen and (max-width: 670px) {
+	.subtitle-page {
+		top: 35vh;
+		font-size: 24px;
+	}
+	.title-page {
+		top: 40vh;
+		font-size: 32px;
+	}
+	.btn-consultation {
+		top: 75vh;
+		font-size: 16px;
+	}
 }
 /**************************
   Второй экран с услугами
@@ -1327,7 +1377,7 @@ object {
 	/*border: 1px solid #4c6881;*/
 	text-align: center;
 	margin: 1px;
-	min-width: 220px;
+	min-width: 297px;
 	padding: 10px;
 	position: relative;
 	background-color: #fff;
@@ -1377,9 +1427,6 @@ object {
 	text-align: center;
 	transition: all .4s ease-in;
 }
-.services-item:hover {
-	background-color: #fff;
-}
 .services-item:hover::before {
 	width: 100px;
 }
@@ -1389,3 +1436,62 @@ object {
 .services-item:hover > .services-title {
 	top: 160px;
 }
+/*
+		Медиазапросы
+-----------------------------*/
+/*@media only screen and (max-width: 1100px) {*/
+	/*.services-item {*/
+		/*min-width: 250px;*/
+	/*}*/
+/*}*/
+/*@media only screen and (max-width: 970px) {*/
+	/*.services-item {*/
+		/*min-width: 275px;*/
+	/*}*/
+	/*.services-icon {*/
+		/*top: 70px;*/
+	/*}*/
+	/*.services-title {*/
+		/*top: 130px;*/
+	/*}*/
+	/*.services-item::before {*/
+		/*margin-top: 130px;*/
+	/*}*/
+	/*.services-item:hover > .services-icon {*/
+		/*top: 50px;*/
+	/*}*/
+	/*.services-item:hover > .services-title {*/
+		/*top: 150px;*/
+	/*}*/
+/*}*/
+/*@media only screen and (max-width: 767px) {*/
+	/*.row-home-services {*/
+		/*padding: 100px 40px;*/
+	/*}*/
+/*}*/
+/*@media only screen and (max-width: 450px) {*/
+	/*.row-home-services {*/
+		/*padding: 100px 40px;*/
+	/*}*/
+	/*.services-item {*/
+		/*min-width: 300px;*/
+	/*}*/
+/*}*/
+/*****************************
+   Третий экран с биографией
+ *****************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
