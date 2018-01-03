@@ -1337,7 +1337,7 @@ object {
 -----------------------------*/
 @media only screen and (max-width: 767px) {
 	.row-home-bg-video {
-		background: url("image/pexels-photo-196659.jpeg") center no-repeat;
+		background: url("lib/img/pexels-photo-196659.jpeg") center no-repeat;
 		background-size: cover;
 		position: relative;
 	}
