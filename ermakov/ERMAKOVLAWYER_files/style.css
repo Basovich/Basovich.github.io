@@ -1264,9 +1264,6 @@ object {
 /*******************************
   Первый экран с фоновым видео
  *******************************/
-.conteiner {
-	height: 2000px;
-}
 .row-home-bg-video {
 	position: relative;
 	height: 100vh;
