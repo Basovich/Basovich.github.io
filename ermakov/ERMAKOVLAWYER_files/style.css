@@ -1480,22 +1480,23 @@ object {
 /*****************************
    Третий экран с биографией
  *****************************/
-
+/*********************************
+   Третий экран с преймуществами
+ *********************************/
 .excellency {
 	display: flex;
-	margin: 100px 100px 100px 0;
+	flex-wrap: wrap;
+	margin: 0 25px 0 0;
 }
-
 .excellency__img {
 	background: url("lib/img/bg-excellency.jpg") center no-repeat;
 	background-size: cover;
 	position: relative;
-	flex-basis: 50%;
+	flex-basis: 45%;
 	height: 750px;
 }
-
 .excellency__content {
-	flex-basis: 50%;
+	flex-basis: 45%;
 	margin: 50px 0 50px 75px;
 }
 .excellency__title {
@@ -1503,17 +1504,62 @@ object {
 	font-size: 34px;
 }
 .excellency__subtitle {
-	margin: 0 0 50px 0;
+	margin: 0;
 }
 .excellency__items {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .excellency__item {
 	flex-basis: 45%;
 	margin-right: 10px;
+	line-height: 18px;
+	margin-top: 30px;
 }
-
+.excellency__item-title-wrap {
+	display: flex;
+	align-items: center;
+}
+.excellency__item-title {
+	margin: 0;
+	padding-left: 12px;
+}
+.excellency__item-text {
+	padding-left: 60px;
+	font-size: 12px;
+}
+/*
+		Медиазапросы
+-----------------------------*/
+@media only screen and (max-width: 1110px) {
+	.excellency {
+		display: block;
+		margin-right: 0;
+	}
+	.excellency__img {
+		background-size: contain;
+	}
+	.excellency__content {
+		margin: 50px;
+	}
+	.excellency__title {
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 575px) {
+	.excellency__content {
+		margin: 30px;
+	}
+	.excellency__subtitle {
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 550px) {
+	.excellency__items {
+		display: block;
+	}
+}
 
 
 
