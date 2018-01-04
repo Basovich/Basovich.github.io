@@ -1439,47 +1439,80 @@ object {
 /*
 		Медиазапросы
 -----------------------------*/
-/*@media only screen and (max-width: 1100px) {*/
-	/*.services-item {*/
-		/*min-width: 250px;*/
-	/*}*/
-/*}*/
-/*@media only screen and (max-width: 970px) {*/
-	/*.services-item {*/
-		/*min-width: 275px;*/
-	/*}*/
-	/*.services-icon {*/
-		/*top: 70px;*/
-	/*}*/
-	/*.services-title {*/
-		/*top: 130px;*/
-	/*}*/
-	/*.services-item::before {*/
-		/*margin-top: 130px;*/
-	/*}*/
-	/*.services-item:hover > .services-icon {*/
-		/*top: 50px;*/
-	/*}*/
-	/*.services-item:hover > .services-title {*/
-		/*top: 150px;*/
-	/*}*/
-/*}*/
-/*@media only screen and (max-width: 767px) {*/
-	/*.row-home-services {*/
-		/*padding: 100px 40px;*/
-	/*}*/
-/*}*/
-/*@media only screen and (max-width: 450px) {*/
-	/*.row-home-services {*/
-		/*padding: 100px 40px;*/
-	/*}*/
-	/*.services-item {*/
-		/*min-width: 300px;*/
-	/*}*/
-/*}*/
+@media only screen and (max-width: 1100px) {
+	.services-item {
+		min-width: 250px;
+	}
+}
+@media only screen and (max-width: 970px) {
+	.services-item {
+		min-width: 275px;
+	}
+	.services-icon {
+		top: 70px;
+	}
+	.services-title {
+		top: 130px;
+	}
+	.services-item::before {
+		margin-top: 130px;
+	}
+	.services-item:hover > .services-icon {
+		top: 50px;
+	}
+	.services-item:hover > .services-title {
+		top: 150px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.row-home-services {
+		padding: 100px 40px;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.row-home-services {
+		padding: 100px 40px;
+	}
+	.services-item {
+		min-width: 300px;
+	}
+}
 /*****************************
    Третий экран с биографией
  *****************************/
+
+.excellency {
+	display: flex;
+	margin: 100px 100px 100px 0;
+}
+
+.excellency__img {
+	background: url("lib/img/bg-excellency.jpg") center no-repeat;
+	background-size: cover;
+	position: relative;
+	flex-basis: 50%;
+	height: 750px;
+}
+
+.excellency__content {
+	flex-basis: 50%;
+	margin: 50px 0 50px 75px;
+}
+.excellency__title {
+	margin: 0 0 10px 0;
+	font-size: 34px;
+}
+.excellency__subtitle {
+	margin: 0 0 50px 0;
+}
+.excellency__items {
+	display: flex;
+	flex-wrap: wrap;
+}
+.excellency__item {
+	flex-basis: 45%;
+	margin-right: 10px;
+}
 
 
 
