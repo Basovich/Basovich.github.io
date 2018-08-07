@@ -11,7 +11,6 @@
     tl.to(".logo", .3, {'transform': 'rotate(-4deg)', 'transformOrigin': '50% 2%',})
     tl.to(".logo", .3, {'transform': 'rotate(0deg)', 'transformOrigin': '50% 2%',})
     tl.from(".logo__text", 1, {autoAlpha: 0, y: -10})
-<<<<<<< HEAD
     tl.to(".main-menu", 1, {'height': '60px'}, 'logo')
     tl.to(".logo", 1, {'height': '80px', 'width': '80px', 'transform': 'matrix(1, 0, 0, 1, 0, 7)'}, 'logo');
 
@@ -36,12 +35,6 @@
             });
         });
     })();
-
-
-=======
-    tl.to(".main-menu", 1, {'height': '100px'}, 'logo')
-    tl.to(".logo", 1, {'height': '90px', 'width': '90px', 'transform': 'matrix(1, 0, 0, 1, 0, 0)'}, 'logo');
->>>>>>> origin/master
 
 
     /*.staggerTo('.letter', .2, {autoAlpha:1, scale:1, transformOrigin: "1px 1px 0px"}, 0.05)
