@@ -1,4 +1,4 @@
-(function ($) {
+// (function ($) {
 
     var tl = new TimelineLite();
 
@@ -23,18 +23,16 @@
         var l = -parseInt($('.slide').width() - $('.head-page-slider').width()) / 40;
         var t = -parseInt($('.slide').height() - $('.head-page-slider').height()) / 40;
         $('.slide').css('transform', 'translateX(' + (l / 50) + 'px)' + ' translateY(' + (t / 50) + 'px)');
-        $('.slide').mouseenter(function(e){
+        $('.slide-item').mouseenter(function (e) {
             var x = e.pageX;
             var y = e.pageY;
-            $(this).mousemove(function(b,d){
+            $('.slide-item').mousemove(function (b, d) {
                 var x2 = b.pageX;
                 var y2 = b.pageY;
                 var p = x2-x;
                 var d = y2-y;
-                console.log(l - p / 50);
-                console.log(t - d / 50);
                 var tl = new TimelineLite();
-                tl.to(this, 1, {x: l - p / 50, y: t - d / 50});
+                tl.to('.slide', 1.5, {x: l - p / 50, y: t - d / 50});
             });
         });
     })();
@@ -62,4 +60,4 @@
     //  ;
 
 
-}(jQuery));
+// }(jQuery));
