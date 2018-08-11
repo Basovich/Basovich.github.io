@@ -83,10 +83,11 @@ address {
 /*--------------------------------------------------------------
             # Mixin
 --------------------------------------------------------------*/
+/*Начало - для секций, типографика для начала страницы*/
 .container {
     width: 100%;
     height: auto;
-    padding: 180px 8%;
+    padding: 120px 8%;
 }
 .container__title {
     margin-top: 0;
@@ -102,43 +103,137 @@ address {
     text-align: center;
 }
 
-.content__title {
-    font-size: 60px;
-    color: #444;
-}
+/*Конец - для секций, типографика для начала страницы*/
 
+/*Начало - для секций, типографика для подтем*/
+.content__title {
+    font-size: 50px;
+    color: #859fc7;
+    margin: 0 0 40px 0;
+}
 .content__title::after {
     content: '';
     display: block;
     width: 100px;
     height: 2px;
-    background-color: #444;
+    background-color: #859fc7;
     position: relative;
-    transform: translateY(20px);
+    transform: translateY(0px);
 }
 
-.content__text {
+.content__sup-title {
     font-size: 14px;
     color: #444;
 }
 
+.content__text {
+    font-size: 16px;
+    color: #444;
+    margin: 0 0 30px 0;
+}
+
+/*Конец - для секций, типографика для подтем*/
+
+/* Начало - секция призыв к действию*/
+.action-block {
+    width: 100%;
+    height: auto;
+    background-image: url('../img/bg_block-action.jpeg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.action-block__title {
+    font-size: 24px;
+    color: #444;
+}
+
+.action-block__description {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+/* Конец - секция призыв к действию*/
+
+/*Начало - карточки*/
+.card-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__card {
+    width: 32%;
+    height: 500px;
+    background-color: #859fc7;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.content__card-text-wrap {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+}
+
+.content__card-title {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+    color: #fff;
+    position: relative;
+}
+
+.content__card-title::before,
+.content__card-title::after {
+    content: '';
+    display: block;
+    width: 20%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+.content__card-title::after {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.content__card-text {
+    font-size: 14px;
+    color: #c1c9d3;
+    width: 100%;
+    padding: 0 40px 0 0;
+}
+
+/*Конец - карточки*/
+
+/* Начало - кнопка*/
 .btn-wrapp {
     width: 50%;
     margin: 0 auto;
     text-align: center;
 }
-
 .button {
     padding: 10px 30px;
-    background-color: #5e8959;
+    background-color: #448b5f;
     border: none;
-    border-radius: 8px;
+    border-radius: 6px;
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
 }
+
+/* Конец - кнопка*/
+
 
 /*--------------------------------------------------------------
             # Home page
@@ -203,14 +298,12 @@ address {
     padding-top: 250px;
     padding-bottom: 80px;
 }
-
 .who-we-are .img-container {
     width: 50%;
     height: 550px;
     position: relative;
     z-index: 2;
 }
-
 .who-we-are .bg-img--1 {
     width: 100%;
     height: 60%;
@@ -220,7 +313,6 @@ address {
     background-size: cover;
     background-position: center;
 }
-
 .who-we-are .bg-img--2 {
     width: 80%;
     height: 50%;
@@ -252,7 +344,7 @@ address {
 
 .who-we-are .bg-parallax {
     display: block;
-    width: 60vw;
+    width: 50vw;
     height: 550px;
     background-color: #ebf3ff;
     position: absolute;
@@ -261,42 +353,72 @@ address {
     transform: translateY(-15%);
     z-index: -1;
 }
-
-.who-we-are .content__title {
-    margin: 0 0 60px 0;
-}
-
-.who-we-are .content__text {
-    margin: 0 0 30px 0;
-}
-
 /* Конец - Блок Кто мы*/
 
 /* Начало - Блок Что мы делаем*/
-.what-we-do {
-    background-color: #fff;
+.product {
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: #d9d2e5;
+    /*background-image: url('../img/bg_5.jpg');*/
+    /*background-repeat: no-repeat;*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
     position: relative;
     z-index: 10;
 }
 
+.product .content__text {
+    width: 60%;
+}
 /* Конец - Блок Что мы делаем*/
 
-/* Начало - Блок призыв к действию*/
-.action-block {
-    width: 100%;
-    height: auto;
-    background-image: url('../img/bg_block-action.jpeg');
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-.action-block__title {
-    font-size: 24px;
-}
-.action-block__description {
-    margin-bottom: 40px;
+/* Начало - Блок Преимуществ*/
+.benefit .card-wrap {
+    margin-top: 120px;
 }
 
-/* Конец - Блок призыв к действию*/
+.benefit .content__card {
+    height: 250px;
+    width: 30%;
+    padding: 20px 40px 40px 40px;
+}
+
+.benefit .content__card::before {
+    content: '01.';
+    display: block;
+    font-size: 90px;
+    font-weight: 900;
+    color: #345176;
+    position: absolute;
+    top: -80px;
+    left: 40px;
+}
+
+.benefit .content__card:nth-of-type(2)::before {
+    content: '02.';
+}
+
+.benefit .content__card:nth-of-type(3)::before {
+    content: '03.';
+}
+
+.benefit .content__card-title {
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    padding-top: 40px;
+}
+
+.benefit .content__card-title::before,
+.benefit .content__card-title::after {
+    display: none;
+}
+
+.benefit .content__card-text {
+    font-size: 16px;
+}
+
+/* Конец - Блок Что мы делаем*/
+
+
