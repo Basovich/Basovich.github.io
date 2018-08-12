@@ -120,18 +120,15 @@ address {
     position: relative;
     transform: translateY(0px);
 }
-
 .content__sup-title {
     font-size: 14px;
     color: #444;
 }
-
 .content__text {
     font-size: 16px;
     color: #444;
     margin: 0 0 30px 0;
 }
-
 /*Конец - для секций, типографика для подтем*/
 
 /* Начало - секция призыв к действию*/
@@ -145,18 +142,15 @@ address {
     background-position: center;
     background-attachment: fixed;
 }
-
 .action-block__title {
     font-size: 24px;
     color: #444;
 }
-
 .action-block__description {
     font-size: 16px;
     color: #444;
     margin-bottom: 40px;
 }
-
 /* Конец - секция призыв к действию*/
 
 /*Начало - карточки*/
@@ -164,10 +158,9 @@ address {
     display: flex;
     justify-content: space-between;
 }
-
 .content__card {
     width: 32%;
-    height: 500px;
+    height: 400px;
     background-color: #859fc7;
     padding: 20px 30px;
     position: relative;
@@ -224,14 +217,12 @@ address {
     padding: 10px 30px;
     background-color: #448b5f;
     border: none;
-    border-radius: 6px;
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
 }
-
 /* Конец - кнопка*/
 
 
@@ -360,11 +351,11 @@ address {
     padding-left: 15%;
     padding-right: 15%;
     background-color: #d9d2e5;
-    /*background-image: url('../img/bg_5.jpg');*/
+    background-image: url('../img/Home.png');
     /*background-repeat: no-repeat;*/
-    /*-webkit-background-size: cover;*/
-    /*background-size: cover;*/
-    /*background-position: center;*/
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center;
     position: relative;
     z-index: 10;
 }
@@ -375,13 +366,17 @@ address {
 /* Конец - Блок Что мы делаем*/
 
 /* Начало - Блок Преимуществ*/
+.benefit {
+    padding-left: 15%;
+    padding-right: 15%;
+}
 .benefit .card-wrap {
     margin-top: 120px;
 }
 
 .benefit .content__card {
-    height: 250px;
-    width: 30%;
+    height: auto;
+    width: 31%;
     padding: 20px 40px 40px 40px;
 }
 
@@ -405,7 +400,7 @@ address {
 }
 
 .benefit .content__card-title {
-    font-size: 24px;
+    font-size: 20px;
     margin: 0 0 15px 0;
     padding-top: 40px;
 }
@@ -416,7 +411,7 @@ address {
 }
 
 .benefit .content__card-text {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 /* Конец - Блок Что мы делаем*/
