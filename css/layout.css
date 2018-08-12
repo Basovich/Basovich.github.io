@@ -249,16 +249,18 @@ address {
     transform: translateX(-50%) translateY(-50%);
 }
 .slide__title-page {
-    font-size: 36px;
+    font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #fff;
+    font-weight: 400;
     text-align: center;
     margin-top: 0;
     margin-bottom: 40px;
 }
 .slide__text {
     font-size: 18px;
+    font-weight: 400;
     color: #fff;
     text-align: center;
     margin-bottom: 40px;
@@ -370,6 +372,7 @@ address {
 .benefit {
     padding-left: 15%;
     padding-right: 15%;
+    background-color: #fff;
 }
 .benefit .card-wrap {
     margin-top: 120px;
@@ -550,7 +553,7 @@ address {
 
 /* Конец - Блок Галереи*/
 
-/* Начало - блок контактов*/
+/* Начало - секция контакты*/
 .contact-block {
     width: 100%;
     height: auto;
@@ -702,4 +705,34 @@ textarea:focus ~ .label-box::after {
     background-color: #416f9c;
 }
 
-/* Конец - секция призыв к действию*/
+/* Конец - секция контакты*/
+
+/* Начало - секция Подвал*/
+body {
+    /*padding-bottom: 100px;*/
+}
+
+.wrapper-page {
+    position: relative;
+    /*z-index: 20;*/
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15%;
+    height: auto;
+    width: 100%;
+    /*position: fixed;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*z-index: 12;*/
+    color: #fff;
+    background-color: #416f9c;
+    background-image: url(../img/Home.png);
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center;
+}
