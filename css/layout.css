@@ -142,6 +142,7 @@ address {
     background-position: center;
     background-attachment: fixed;
 }
+
 .action-block__title {
     font-size: 24px;
     color: #444;
@@ -548,3 +549,129 @@ address {
 }
 
 /* Конец - Блок Галереи*/
+
+/* Начало - блок контактов*/
+.contact-block {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url('../img/1.jpeg');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.contact-block .wrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+    padding: 5% 10%;
+}
+
+.contact-block .blur {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(250, 250, 250, 0.6);
+    filter: blur(4px);
+    z-index: 0;
+}
+
+.contact-block .form-group {
+    position: relative;
+    z-index: 2;
+}
+
+/*Form*/
+form {
+    margin: 50px auto 0;
+}
+
+input,
+textarea {
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #757575;
+    margin-bottom: 40px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.label-box {
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: -66px;
+    font-size: 16px;
+    transition: 0.2s ease all;
+    pointer-events: none;
+}
+
+textarea ~ .label-box label {
+    top: -105px;
+}
+
+input:focus ~ .label-box label,
+input:valid ~ .label-box label,
+textarea:focus ~ .label-box label,
+textarea:valid ~ .label-box label {
+    font-size: 14px;
+    transform: translateY(-35px);
+    color: rgba(52, 152, 219, 0.7);
+}
+
+.label-box::before,
+.label-box::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 40px;
+    background-color: rgba(52, 152, 219, 0.7);
+    transition: all 0.3s;
+}
+
+textarea ~ .label-box::before,
+textarea ~ .label-box::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 47px;
+    background-color: rgba(52, 152, 219, 0.7);
+    transition: all 0.3s;
+}
+
+.label-box::before {
+    left: 50%;
+}
+
+.label-box::after {
+    right: 50%;
+}
+
+input:focus ~ .label-box::before,
+input:focus ~ .label-box::after,
+textarea:focus ~ .label-box::before,
+textarea:focus ~ .label-box::after {
+    width: 50%;
+}
+
+/* Конец - секция призыв к действию*/
