@@ -209,7 +209,7 @@ address {
 
 /* Начало - кнопка*/
 .btn-wrapp {
-    width: 50%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
 }
@@ -365,7 +365,7 @@ address {
 }
 /* Конец - Блок Что мы делаем*/
 
-/* Начало - Блок Преимуществ*/
+/* Начало - Блок Производства*/
 .benefit {
     padding-left: 15%;
     padding-right: 15%;
@@ -376,10 +376,13 @@ address {
 
 .benefit .content__card {
     height: auto;
-    width: 31%;
+    width: 32%;
     padding: 20px 40px 40px 40px;
 }
 
+.benefit .content__card-text {
+    padding: 0;
+}
 .benefit .content__card::before {
     content: '01.';
     display: block;
@@ -414,6 +417,134 @@ address {
     font-size: 14px;
 }
 
-/* Конец - Блок Что мы делаем*/
+/* Конец - Блок Производства*/
 
+/* Начало - Блок Галереи*/
+.menu-gallery {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+}
 
+/*Левая сторона*/
+.menu-gallery .img-slider {
+    display: flex;
+    width: 50%;
+}
+
+.menu-gallery .img-title-wrap {
+    width: auto;
+    text-align: right;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-gallery .img-title {
+    font-size: 26px;
+    line-height: 1;
+    color: #444;
+    cursor: pointer;
+    position: relative;
+    transition: color .2s linear;
+}
+
+.menu-gallery .img-title:hover {
+    color: #345176;
+}
+
+.menu-gallery .img-title::after {
+    content: '';
+    display: inline-block;
+    width: 80px;
+    height: 2px;
+    background-color: #444;
+    position: absolute;
+    top: calc(50% - 1px);
+    right: -105px;
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform .2s linear, background-color .2s linear;
+}
+
+.menu-gallery .img-title.active {
+    color: #345176;
+}
+
+.menu-gallery .img-title.active::after {
+    transform: scale(1);
+    background-color: #345176;
+}
+
+.menu-gallery .img-title.active:hover::after {
+    transform: scale(1);
+    background-color: #345176;
+}
+
+.menu-gallery .img-title:hover::after {
+    transform: scale(0.5);
+    background-color: #345176;
+}
+
+.img-slide-wrap {
+    width: 60%;
+    height: 400px;
+    position: relative;
+    top: 50%;
+    left: 60%;
+    transform: translateY(-50%) translateX(-50%);
+    background-color: #345176;
+}
+
+.img-slide-group {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.img-slide-group.active {
+    opacity: 1;
+    background-color: #444;
+}
+
+/*Правая сторона*/
+.menu-gallery .wrap {
+    position: relative;
+    width: 50%;
+    height: auto;
+}
+
+.menu-gallery .content {
+    width: 60%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateX(35%) translateY(-50%);
+    z-index: 1;
+    opacity: 0;
+}
+
+.content.active {
+    opacity: 1;
+}
+
+.menu-gallery .bg-parallax {
+    display: block;
+    width: 50vw;
+    height: 550px;
+    background-color: #ebf3ff;
+    position: relative;
+    top: 0;
+    right: 0;
+    transform: translateX(-15%);
+    z-index: -1;
+}
+
+/* Конец - Блок Галереи*/

@@ -38,6 +38,22 @@ tl.to(".main-menu", 1, {'height': '100px'}, 'logo')
     })();
 
 
+/*Slider*/
+$('.menu-gallery .img-title').on("click", function () {
+    var num = $(this).index();
+
+    $('.menu-gallery .img-title').removeClass('active');
+    $('.menu-gallery .content').removeClass('active');
+    $('.img-slide-group').removeClass('active');
+
+
+    $(this).addClass('active');
+    $('.menu-gallery .content').eq(num).addClass('active');
+    $('.img-slide-group').eq(num).addClass('active');
+
+});
+
+
     /*.staggerTo('.letter', .2, {autoAlpha:1, scale:1, transformOrigin: "1px 1px 0px"}, 0.05)
     .to(".logo", 1, {autoAlpha:1})
     .staggerTo('.letter', .2, {autoAlpha:0, scale:1, transformOrigin: "1px 1px 0px"}, 0.03)
