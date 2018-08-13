@@ -290,7 +290,7 @@ address {
     left: -5vw;
 }
 .slide-item:nth-of-type(1) .slide {
-    background-image: url('../img/bg_home_3.jpg');
+    background-image: url('../img/people_3.jpg');
     z-index: 1;
 }
 
