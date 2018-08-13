@@ -62,7 +62,7 @@ address {
 .main-menu {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     background-color: rgba(255, 255, 255, 0.41);
     display: flex;
     justify-content: center;
@@ -276,7 +276,7 @@ address {
     left: -5vw;
 }
 .slide-item:nth-of-type(1) .slide {
-    background-image: url('../img/smooth.jpg');
+    background-image: url('../img/people_3.jpg');
     z-index: 1;
 }
 
