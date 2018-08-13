@@ -15,12 +15,13 @@
 * {
     line-height: 1.5;
     box-sizing: border-box;
+    color: #3b444b;
 }
 html,
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Tenor Sans', sans-serif;
     font-size: 16px;
     font-weight: normal;
     position: relative;
@@ -62,7 +63,9 @@ address {
 .main-menu {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     background-color: rgba(255, 255, 255, 0.41);
     display: flex;
     justify-content: center;
@@ -87,7 +90,7 @@ address {
 .container {
     width: 100%;
     height: auto;
-    padding: 120px 8%;
+    padding: 120px 15%;
 }
 .container__title {
     margin-top: 0;
@@ -95,6 +98,7 @@ address {
     font-size: 26px;
     text-transform: uppercase;
     text-align: center;
+    color: #55946d;
 }
 .container__description {
     width: 60%;
@@ -108,7 +112,7 @@ address {
 /*Начало - для секций, типографика для подтем*/
 .content__title {
     font-size: 50px;
-    color: #859fc7;
+    color: #55946d;
     margin: 0 0 40px 0;
 }
 .content__title::after {
@@ -116,17 +120,15 @@ address {
     display: block;
     width: 100px;
     height: 2px;
-    background-color: #859fc7;
+    background-color: #55946d;
     position: relative;
     transform: translateY(0px);
 }
 .content__sup-title {
     font-size: 14px;
-    color: #444;
 }
 .content__text {
     font-size: 16px;
-    color: #444;
     margin: 0 0 30px 0;
 }
 /*Конец - для секций, типографика для подтем*/
@@ -145,11 +147,9 @@ address {
 
 .action-block__title {
     font-size: 24px;
-    color: #444;
 }
 .action-block__description {
     font-size: 16px;
-    color: #444;
     margin-bottom: 40px;
 }
 /* Конец - секция призыв к действию*/
@@ -216,7 +216,7 @@ address {
 }
 .button {
     padding: 10px 30px;
-    background-color: #448b5f;
+    background-color: #55946d;
     border: none;
     color: #fff;
     font-size: 16px;
@@ -226,7 +226,20 @@ address {
 }
 /* Конец - кнопка*/
 
+/* Начало - однотонный фон паралакс*/
+.bg-parallax {
+    display: block;
+    width: 120%;
+    height: 550px;
+    background-color: #efe0dc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-10%);
+    z-index: -1;
+}
 
+/* Конец - однотонный фон паралакс*/
 /*--------------------------------------------------------------
             # Home page
 --------------------------------------------------------------*/
@@ -235,6 +248,7 @@ address {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 .slide-item {
     width: 100%;
@@ -276,7 +290,7 @@ address {
     left: -5vw;
 }
 .slide-item:nth-of-type(1) .slide {
-    background-image: url('../img/smooth.jpg');
+    background-image: url('../img/bg_home_3.jpg');
     z-index: 1;
 }
 
@@ -336,23 +350,10 @@ address {
     z-index: 1;
 }
 
-.who-we-are .bg-parallax {
-    display: block;
-    width: 50vw;
-    height: 550px;
-    background-color: #ebf3ff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateY(-15%);
-    z-index: -1;
-}
 /* Конец - Блок Кто мы*/
 
 /* Начало - Блок Что мы делаем*/
 .product {
-    padding-left: 15%;
-    padding-right: 15%;
     background-color: #d9d2e5;
     background-image: url('../img/Home.png');
     /*background-repeat: no-repeat;*/
@@ -370,8 +371,6 @@ address {
 
 /* Начало - Блок Производства*/
 .benefit {
-    padding-left: 15%;
-    padding-right: 15%;
     background-color: #fff;
 }
 .benefit .card-wrap {
@@ -450,14 +449,13 @@ address {
 .menu-gallery .img-title {
     font-size: 26px;
     line-height: 1;
-    color: #444;
     cursor: pointer;
     position: relative;
     transition: color .2s linear;
 }
 
 .menu-gallery .img-title:hover {
-    color: #345176;
+    color: #55946d;
 }
 
 .menu-gallery .img-title::after {
@@ -475,17 +473,17 @@ address {
 }
 
 .menu-gallery .img-title.active {
-    color: #345176;
+    color: #55946d;
 }
 
 .menu-gallery .img-title.active::after {
     transform: scale(1);
-    background-color: #345176;
+    background-color: #55946d;
 }
 
 .menu-gallery .img-title.active:hover::after {
     transform: scale(1);
-    background-color: #345176;
+    background-color: #55946d;
 }
 
 .menu-gallery .img-title:hover::after {
@@ -538,19 +536,6 @@ address {
 .content.active {
     opacity: 1;
 }
-
-.menu-gallery .bg-parallax {
-    display: block;
-    width: 50vw;
-    height: 550px;
-    background-color: #ebf3ff;
-    position: relative;
-    top: 0;
-    right: 0;
-    transform: translateX(-15%);
-    z-index: -1;
-}
-
 /* Конец - Блок Галереи*/
 
 /* Начало - секция контакты*/
