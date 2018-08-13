@@ -124,11 +124,9 @@ address {
 }
 .content__sup-title {
     font-size: 14px;
-    color: #444;
 }
 .content__text {
     font-size: 16px;
-    color: #444;
     margin: 0 0 30px 0;
 }
 /*Конец - для секций, типографика для подтем*/
@@ -147,11 +145,9 @@ address {
 
 .action-block__title {
     font-size: 24px;
-    color: #444;
 }
 .action-block__description {
     font-size: 16px;
-    color: #444;
     margin-bottom: 40px;
 }
 /* Конец - секция призыв к действию*/
@@ -254,7 +250,7 @@ address {
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #fff;
+    color: #55946d;
     font-weight: 400;
     text-align: center;
     margin-top: 0;
@@ -263,7 +259,7 @@ address {
 .slide__text {
     font-size: 18px;
     font-weight: 400;
-    color: #fff;
+    color: #55946d;
     text-align: center;
     margin-bottom: 40px;
 }
