@@ -95,6 +95,7 @@ address {
     font-size: 26px;
     text-transform: uppercase;
     text-align: center;
+    color: #55946d;
 }
 .container__description {
     width: 60%;
@@ -108,7 +109,7 @@ address {
 /*Начало - для секций, типографика для подтем*/
 .content__title {
     font-size: 50px;
-    color: #859fc7;
+    color: #55946d;
     margin: 0 0 40px 0;
 }
 .content__title::after {
@@ -116,7 +117,7 @@ address {
     display: block;
     width: 100px;
     height: 2px;
-    background-color: #859fc7;
+    background-color: #55946d;
     position: relative;
     transform: translateY(0px);
 }
