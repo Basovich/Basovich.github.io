@@ -305,7 +305,7 @@ address {
 }
 .who-we-are .img-container {
     width: 50%;
-    height: 400px;
+    height: 480px;
     position: relative;
     top: 50px;
     z-index: 2;
@@ -358,11 +358,11 @@ address {
 .product {
     padding-left: 15%;
     padding-right: 15%;
-    background-color: #d9d2e5;
-    background-image: url('../img/Home.png');
-    /*background-repeat: no-repeat;*/
-    -webkit-background-size: contain;
-    background-size: contain;
+    background-color: #ededed;
+    background-image: url('../img/bg_lime.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
     background-position: center;
     position: relative;
     z-index: 10;
@@ -693,10 +693,6 @@ textarea:focus ~ .label-box::after {
     width: 50%;
 }
 
-.contact-block .button {
-    background-color: #416f9c;
-}
-
 /* Конец - секция контакты*/
 
 /* Начало - секция Подвал*/
@@ -722,7 +718,7 @@ body {
     /*right: 0;*/
     /*z-index: 12;*/
     color: #fff;
-    background-color: #416f9c;
+    background-color: #55946d;
     background-image: url(../img/Home.png);
     -webkit-background-size: contain;
     background-size: contain;
