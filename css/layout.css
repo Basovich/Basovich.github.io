@@ -25,6 +25,7 @@ body {
     font-weight: normal;
     position: relative;
     overflow-x: hidden;
+    color: #3b444b;
 }
 body {
     background-color: #fff;
@@ -87,7 +88,7 @@ address {
 .container {
     width: 100%;
     height: auto;
-    padding: 120px 8%;
+    padding: 120px 15%;
 }
 .container__title {
     margin-top: 0;
@@ -102,13 +103,12 @@ address {
     font-size: 18px;
     text-align: center;
 }
-
 /*Конец - для секций, типографика для начала страницы*/
 
 /*Начало - для секций, типографика для подтем*/
 .content__title {
     font-size: 50px;
-    color: #859fc7;
+    color: #55946d;
     margin: 0 0 40px 0;
 }
 .content__title::after {
@@ -116,17 +116,15 @@ address {
     display: block;
     width: 100px;
     height: 2px;
-    background-color: #859fc7;
+    background-color: #55946d;
     position: relative;
     transform: translateY(0px);
 }
 .content__sup-title {
     font-size: 14px;
-    color: #444;
 }
 .content__text {
     font-size: 16px;
-    color: #444;
     margin: 0 0 30px 0;
 }
 /*Конец - для секций, типографика для подтем*/
@@ -145,11 +143,9 @@ address {
 
 .action-block__title {
     font-size: 24px;
-    color: #444;
 }
 .action-block__description {
     font-size: 16px;
-    color: #444;
     margin-bottom: 40px;
 }
 /* Конец - секция призыв к действию*/
@@ -205,8 +201,21 @@ address {
     width: 100%;
     padding: 0 40px 0 0;
 }
-
 /*Конец - карточки*/
+
+/*Начало - паралакс фон*/
+.bg-parallax {
+    display: block;
+    width: 50vw;
+    height: 100%;
+    background-color: #d8d6e2;
+    position: absolute;
+    top: 5%;
+    right: 0;
+    z-index: -1;
+    /*transition: transform .2s linear;*/
+}
+/*Конец - паралакс фон*/
 
 /* Начало - кнопка*/
 .btn-wrapp {
@@ -216,7 +225,7 @@ address {
 }
 .button {
     padding: 10px 30px;
-    background-color: #448b5f;
+    background-color: #55946d;
     border: none;
     color: #fff;
     font-size: 16px;
@@ -235,21 +244,25 @@ address {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 .slide-item {
     width: 100%;
     height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .slide__content {
     width: 50vw;
     z-index: 2;
     position: relative;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
 .slide__title-page {
-    font-size: 30px;
+    font-size: 40px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #fff;
@@ -289,63 +302,55 @@ address {
     position: relative;
     z-index: 10;
     background-color: #fff;
-    padding-top: 250px;
-    padding-bottom: 80px;
 }
 .who-we-are .img-container {
     width: 50%;
-    height: 550px;
+    height: 400px;
     position: relative;
+    top: 50px;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 .who-we-are .bg-img--1 {
-    width: 100%;
-    height: 60%;
-    background-image: url('../img/bg_2.jpg');
+    width: 120%;
+    height: 120%;
+    background-image: url('../img/smooth.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
+    /*box-shadow: 0 1px 10px 0 rgba(50, 50, 50, 0.75);*/
 }
-.who-we-are .bg-img--2 {
-    width: 80%;
-    height: 50%;
-    background-image: url('../img/bg_1.jpg');
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    bottom: 160px;
-    right: -40px;
-}
+/*.who-we-are .bg-img--2 {*/
+    /*width: 0%;*/
+    /*height: 50%;*/
+    /*background-image: url('../img/bg_1.jpg');*/
+    /*background-repeat: no-repeat;*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*position: absolute;*/
+    /*bottom: 160px;*/
+    /*right: -40px;*/
+/*}*/
 
 .who-we-are .wrap {
     position: relative;
     width: 50%;
-    height: auto;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .who-we-are .content {
     width: 60%;
     height: auto;
     position: relative;
-    top: 0;
-    left: 0;
-    transform: translateX(35%);
     z-index: 1;
-}
-
-.who-we-are .bg-parallax {
-    display: block;
-    width: 50vw;
-    height: 550px;
-    background-color: #ebf3ff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateY(-15%);
-    z-index: -1;
 }
 /* Конец - Блок Кто мы*/
 
@@ -521,7 +526,7 @@ address {
 .menu-gallery .wrap {
     position: relative;
     width: 50%;
-    height: auto;
+    height: 450px;
 }
 
 .menu-gallery .content {
@@ -538,19 +543,6 @@ address {
 .content.active {
     opacity: 1;
 }
-
-.menu-gallery .bg-parallax {
-    display: block;
-    width: 50vw;
-    height: 550px;
-    background-color: #ebf3ff;
-    position: relative;
-    top: 0;
-    right: 0;
-    transform: translateX(-15%);
-    z-index: -1;
-}
-
 /* Конец - Блок Галереи*/
 
 /* Начало - секция контакты*/

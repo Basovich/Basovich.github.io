@@ -1,4 +1,4 @@
-// (function ($) {
+(function ($) {
 
     var tl = new TimelineLite();
 
@@ -11,10 +11,11 @@
     tl.to(".logo", .3, {'transform': 'rotate(-4deg)', 'transformOrigin': '50% 2%',})
     tl.to(".logo", .3, {'transform': 'rotate(0deg)', 'transformOrigin': '50% 2%',})
     tl.from(".logo__text", 1, {autoAlpha: 0, y: -10})
-tl.to(".main-menu", 1, {'height': '100px'}, 'logo')
+    tl.to(".main-menu", 1, {'height': '100px'}, 'logo')
     tl.to(".logo", 1, {'height': '80px', 'width': '80px', 'transform': 'matrix(1, 0, 0, 1, 0, 7)'}, 'logo');
 
 
+    /*паралакс фото на первом экране*/
     (function(){
         var x;
         var y;
@@ -38,26 +39,38 @@ tl.to(".main-menu", 1, {'height': '100px'}, 'logo')
     })();
 
 
-/*Slider*/
-$('.menu-gallery .img-title').on("click", function () {
-    var num = $(this).index();
+    /*Slider*/
+    $('.menu-gallery .img-title').on("click", function () {
+        var num = $(this).index();
 
-    $('.menu-gallery .img-title').removeClass('active');
-    $('.menu-gallery .content').removeClass('active');
-    $('.img-slide-group').removeClass('active');
-
-
-    $(this).addClass('active');
-    $('.menu-gallery .content').eq(num).addClass('active');
-    $('.img-slide-group').eq(num).addClass('active');
-
-});
+        $('.menu-gallery .img-title').removeClass('active');
+        $('.menu-gallery .content').removeClass('active');
+        $('.img-slide-group').removeClass('active');
 
 
-    /*.staggerTo('.letter', .2, {autoAlpha:1, scale:1, transformOrigin: "1px 1px 0px"}, 0.05)
-    .to(".logo", 1, {autoAlpha:1})
-    .staggerTo('.letter', .2, {autoAlpha:0, scale:1, transformOrigin: "1px 1px 0px"}, 0.03)
-    .to(".name", .5, {autoAlpha:1, y:0}, "-=0.15")*/
+        $(this).addClass('active');
+        $('.menu-gallery .content').eq(num).addClass('active');
+        $('.img-slide-group').eq(num).addClass('active');
+
+    });
+
+    var rellax = new Rellax('.bg-parallax', {
+        speed: -2,
+        center: true,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+    });
+
+    var rellax1 = new Rellax('.bg-img--1', {
+        speed: -2,
+        center: true,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+    });
 
 
     // init controller
@@ -76,4 +89,4 @@ $('.menu-gallery .img-title').on("click", function () {
     //  ;
 
 
-// }(jQuery));
+}(jQuery));
