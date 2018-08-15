@@ -1,5 +1,7 @@
 (function ($) {
+    "use strict";
 
+    /*START animation logo*/
     var tl = new TimelineLite();
 
     tl.from(".logo", 1, {autoAlpha: 0, y: 100})
@@ -13,9 +15,9 @@
     tl.from(".logo__text", 1, {autoAlpha: 0, y: -10})
     tl.to(".main-menu", 1, {'height': '100px'}, 'logo')
     tl.to(".logo", 1, {'height': '80px', 'width': '80px', 'transform': 'matrix(1, 0, 0, 1, 0, 7)'}, 'logo');
+    /*END animation logo*/
 
-
-    /*паралакс фото на первом экране*/
+    /*START parallax photo on mousse*/
     (function(){
         var x;
         var y;
@@ -37,9 +39,9 @@
             });
         });
     })();
+    /*END parallax photo on mousse*/
 
-
-    /*Slider*/
+    /*START mini-slider*/
     $('.menu-gallery .img-title').on("click", function () {
         var num = $(this).index();
 
@@ -53,8 +55,11 @@
         $('.img-slide-group').eq(num).addClass('active');
 
     });
+    /*END mini-slider*/
 
-    var rellax = new Rellax('.bg-parallax', {
+
+    /*START parallax on scroll*/
+    var rellax_1 = new Rellax('.bg-parallax', {
         speed: -2,
         center: true,
         wrapper: null,
@@ -63,7 +68,7 @@
         horizontal: false
     });
 
-    var rellax1 = new Rellax('.bg-img--1', {
+    var rellax_2 = new Rellax('.bg-img', {
         speed: -2,
         center: true,
         wrapper: null,
@@ -71,6 +76,10 @@
         vertical: true,
         horizontal: false
     });
+    /*END parallax on scroll*/
+
+
+
 
 
     // init controller

@@ -314,7 +314,7 @@ address {
     justify-content: center;
     overflow: hidden;
 }
-.who-we-are .bg-img--1 {
+.who-we-are .bg-img {
     width: 120%;
     height: 120%;
     background-image: url('../img/smooth.jpg');
@@ -701,8 +701,9 @@ body {
 }
 
 .wrapper-page {
-    position: relative;
+    /*position: relative;*/
     /*z-index: 20;*/
+    /*overflow: hidden;*/
 }
 
 .footer {
