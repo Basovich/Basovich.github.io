@@ -1,13 +1,11 @@
-// SmoothScroll for websites v1.4.6
 (function () {
 
-// Scroll Variables (tweakable)
     var defaultOptions = {
 
         // Scrolling Core
         frameRate        : 0, // [Hz]
         animationTime    : 1000, // [ms]
-        stepSize         : 50, // [px]
+        stepSize         : 20, // [px]
 
         // Pulse (less tweakable)
         // ratio of "tail" to "acceleration"
@@ -30,6 +28,15 @@
 
     var options = defaultOptions;
 
+    $(window).on('load resize', function() {
+        if( $(window).width() <= 1440 ) {
+            defaultOptions.stepSize = 50;
+            console.log('<= 1440 ' + defaultOptions.stepSize);
+        } else if( $(window).width() >= 1440 ) {
+            defaultOptions.stepSize = 20;
+            console.log('>= 1440 ' + defaultOptions.stepSize);
+        }
+    });
 
 // Other Variables
     var isExcluded = false;
