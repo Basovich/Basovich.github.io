@@ -82,20 +82,13 @@
 
 
 
-    // init controller
-    // var controller = new ScrollMagic.Controller();
 
-    // create a scene
-    //  var logoOnLoad = new ScrollMagic.Scene({
-    //          triggerElement: '.block_3', // с этого блока начнеться анимация
-    //          //duration: "40%", // через сколько проиграть анимаци обратно - скрыть элемент
-    //          triggerHook: 0.1, // отметка начала анимации - если поднять вышее нее, то возвращает в положение до анимации, если только не включить reverse
-    //          //reverse: false // анимация играет только 1 раз, надо удалить свойство duration
-    //      })
-    //          .setClassToggle('.block_3', 'bg_color')	// добавляем класс, когда блок с id в зоне видимости
-    //          .addIndicators() // добавляет отметки при пересичении которых начинаеться анимация начала анимации
-    //          .addTo(controller)
-    //  ;
+
+
+
+
+
+
 
 
 }(jQuery));

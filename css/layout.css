@@ -108,7 +108,7 @@ address {
 /*Начало - для секций, типографика для подтем*/
 .content__title {
     font-size: 50px;
-    color: #55946d;
+    color: #078A42;
     margin: 0 0 40px 0;
 }
 .content__title::after {
@@ -116,7 +116,7 @@ address {
     display: block;
     width: 100px;
     height: 2px;
-    background-color: #55946d;
+    background-color: #078A42;
     position: relative;
     transform: translateY(0px);
 }
@@ -225,7 +225,7 @@ address {
 }
 .button {
     padding: 10px 30px;
-    background-color: #55946d;
+    background-color: #078A42;
     border: none;
     color: #fff;
     font-size: 16px;
@@ -247,16 +247,17 @@ address {
     position: relative;
 }
 .slide-item {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
 }
+
 .slide__content {
     width: 50vw;
     z-index: 2;
-    position: relative;
+    position: absolute;
     top: 60%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -279,7 +280,7 @@ address {
     margin-bottom: 40px;
 }
 .slide {
-    width: 115%;
+    width: 115vw;
     height: 115vh;
     background-position: center;
     background-size: cover;
@@ -288,10 +289,17 @@ address {
     top: -5vh;
     left: -5vw;
 }
-.slide-item:nth-of-type(1) .slide {
-    background-image: url('../img/people_3.jpg');
-    z-index: 1;
+.slide-1 .slide {
+    background-image: url('../img/people_5.jpg');
 }
+
+.slide-2 .slide {
+    background-image: url('../img/people_4.jpg');
+}
+.slide-3 .slide {
+    background-image: url('../img/people_3.jpg');
+}
+
 
 /* Конец - Первый блок со слайдером*/
 
@@ -725,3 +733,141 @@ body {
     background-size: contain;
     background-position: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slide-1 {
+    animation: slide-first 15s cubic-bezier(1,0,.44,.82);
+    animation-iteration-count: infinite;
+}
+@keyframes slide-first {
+    0% {
+        transform: translateX(0);
+        z-index: 0;
+    }
+    30% {
+        transform: translateX(0);
+        z-index: 0;
+    }
+    33% {
+        transform: translateX(-20vw);
+        z-index: 0;
+    }
+    35% {
+        transform: translateX(110vw);
+        z-index: 0;
+    }
+    97% {
+        transform: translateX(110vw);
+        z-index: 2;
+    }
+    100% {
+        transform: translateX(0);
+        z-index: 2;
+    }
+}
+
+
+.slide-2 {
+    transform: translateX(110vw);
+    animation: slide-second 15s cubic-bezier(1,0,.44,.82);
+    animation-iteration-count: infinite;
+}
+@keyframes slide-second {
+    0% {
+        transform: translateX(110vw);
+        z-index: 2;
+    }
+    30% {
+        transform: translateX(110vw);
+        z-index: 2;
+    }
+    33% {
+        transform: translateX(0);
+        z-index: 2;
+    }
+    63% {
+        transform: translateX(0);
+        z-index: 0;
+    }
+    66% {
+        transform: translateX(-20vw);
+        z-index: 0;
+    }
+    68% {
+        transform: translateX(110vw);
+        z-index: 2;
+    }
+    100% {
+        transform: translateX(110vw);
+        z-index: 2;
+    }
+}
+
+.slide-3 {
+    transform: translateX(110vw);
+    animation: slide-third 15s cubic-bezier(1,0,.44,.82);
+    animation-iteration-count: infinite;
+}
+@keyframes slide-third {
+    0% {
+        transform: translateX(110vw);
+        z-index: 2;
+    }
+    63% {
+        transform: translateX(110vw);
+        z-index: 2;
+    }
+    66% {
+        transform: translateX(0);
+        z-index: 2;
+    }
+    97% {
+        transform: translateX(0);
+        z-index: 0;
+    }
+    100% {
+        transform: translateX(-20vw);
+        z-index: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
