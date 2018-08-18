@@ -65,11 +65,12 @@ address {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.41);
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    box-shadow: 0 2px 15px 0 rgba(50, 50, 50, 0.45);
 }
 .logo {
     width: 250px;
@@ -109,7 +110,7 @@ address {
 /*Начало - для секций, типографика для подтем*/
 .content__title {
     font-size: 50px;
-    color: #078A42;
+    color: #fff;
     margin: 0 0 40px 0;
 }
 .content__title::after {
@@ -117,7 +118,7 @@ address {
     display: block;
     width: 100px;
     height: 2px;
-    background-color: #078A42;
+    background-color: #fff;
     position: relative;
     transform: translateY(0px);
 }
@@ -127,6 +128,7 @@ address {
 .content__text {
     font-size: 16px;
     margin: 0 0 30px 0;
+    color: #fff;
 }
 /*Конец - для секций, типографика для подтем*/
 
@@ -134,7 +136,7 @@ address {
 .action-block {
     width: 100%;
     height: auto;
-    background-image: url('../img/bg_block-action.jpeg');
+    background-image: url('../img/bg_home_3.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -144,10 +146,12 @@ address {
 
 .action-block__title {
     font-size: 24px;
+    color: #fff;
 }
 .action-block__description {
     font-size: 16px;
     margin-bottom: 40px;
+    color: #fff;
 }
 /* Конец - секция призыв к действию*/
 
@@ -159,7 +163,11 @@ address {
 .content__card {
     width: 32%;
     height: 400px;
-    background-color: #859fc7;
+    background-color: rgba(223, 83, 29, 0.7);
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
     padding: 20px 30px;
     position: relative;
 }
@@ -168,6 +176,8 @@ address {
     position: absolute;
     bottom: 20px;
     left: 30px;
+    width: calc(100% - 60px);
+    z-index: 1;
 }
 
 .content__card-title {
@@ -183,24 +193,25 @@ address {
 .content__card-title::after {
     content: '';
     display: block;
-    width: 20%;
+    width: 100%;
     height: 2px;
     background-color: #fff;
     position: absolute;
     bottom: -8px;
     left: 0;
+    transform: scale(.2);
+    transform-origin: left center;
 }
 
 .content__card-title::after {
-    width: 80%;
+    transform: scale(1);
     background-color: rgba(255, 255, 255, 0.25);
 }
 
 .content__card-text {
     font-size: 14px;
-    color: #c1c9d3;
+    color: #fff;
     width: 100%;
-    padding: 0 40px 0 0;
 }
 /*Конец - карточки*/
 
@@ -209,12 +220,11 @@ address {
     display: block;
     width: 50vw;
     height: 100%;
-    background-color: #d8d6e2;
+    background-color: #ffbb8f;
     position: absolute;
     top: 5%;
     right: 0;
     z-index: -1;
-    /*transition: transform .2s linear;*/
 }
 /*Конец - паралакс фон*/
 
@@ -233,6 +243,7 @@ address {
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
+    box-shadow: 0 2px 15px 0 rgba(50, 50, 50, 0.75);
 }
 /* Конец - кнопка*/
 
@@ -291,14 +302,14 @@ address {
     left: -5vw;
 }
 .slide-1 .slide {
-    background-image: url('../img/people_5.jpg');
+    background-image: url('../img/slide_1-1.jpg');
 }
 
 .slide-2 .slide {
-    background-image: url('../img/people_4.jpg');
+    background-image: url('../img/slide_3-3-3.jpg');
 }
 .slide-3 .slide {
-    background-image: url('../img/people_3.jpg');
+    background-image: url('../img/slide_2.jpg');
 }
 
 
@@ -310,11 +321,11 @@ address {
     justify-content: space-between;
     position: relative;
     z-index: 10;
-    background-color: #fff;
+    background-color: #e9dfdc;
 }
 .who-we-are .img-container {
-    width: 50%;
-    height: 480px;
+    width: 53%;
+    height: 550px;
     position: relative;
     top: 50px;
     z-index: 2;
@@ -326,7 +337,7 @@ address {
 .who-we-are .bg-img {
     width: 100%;
     height: 100%;
-    background-image: url('../img/smooth.jpg');
+    background-image: url('../img/bg_home_9.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -335,7 +346,7 @@ address {
 
 .who-we-are .wrap {
     position: relative;
-    width: 50%;
+    width: 47%;
     height: 550px;
     display: flex;
     align-items: center;
@@ -343,7 +354,7 @@ address {
 }
 
 .who-we-are .content {
-    width: 60%;
+    width: 70%;
     height: auto;
     position: relative;
     z-index: 1;
@@ -363,17 +374,106 @@ address {
     position: relative;
     z-index: 10;
 }
+.product .content__sup-title,
+.product .content__title,
+.product .content__text {
+    color: #2d2d2d;
+}
+.content__card-text-wrap {
+    transform: translateY(calc(100% - 40px));
+    transition: all .6s ease-in;
+}
 
+.product .content__title::after {
+    background-color: #2d2d2d;
+}
 .product .content__text {
     width: 60%;
 }
+
+.product .content__card {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.product .content__card:nth-of-type(1) {
+    background-image: url('../img/bg_1.jpg');
+}
+
+.product .content__card:nth-of-type(2) {
+    background-image: url('../img/bg_2.jpg');
+}
+
+.product .content__card:nth-of-type(3) {
+    background-image: url('../img/bg_3.jpg');
+}
+
+.product  .content__card-title {
+    font-size:24px;
+    color: #fff;
+    transition: color .6s ease-in;
+}
+.product .content__card-title::before {
+    background-color: rgb(255, 255, 255);
+    transition: all .6s ease-in;
+}
+.product .content__card-title::after {
+    background-color: rgba(255, 255, 255, 0.24);
+    transition: all .6s ease-in;
+}
+.product .content__card-text {
+    color: #fff;
+    margin-top: 40px;
+    line-height:1.2;
+    transition: color .6s ease-in;
+}
+.product .content__card::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(207, 161, 195, .4);
+    transition: background-color .6s ease-in;
+}
+.product .content__card:hover::after {
+    background-color: rgba(207, 161, 195, .8);
+}
+.product .content__card:hover .content__card-title,
+.product .content__card:hover .content__card-text {
+    color: #fff;
+}
+.product .content__card:hover .content__card-title::before {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1);
+}
+.product .content__card:hover .content__card-title::after {
+    background-color: rgba(255, 255, 255, .25);
+}
+.product .content__card:hover .content__card-text-wrap {
+    transform: translateY(0);
+}
+
 /* Конец - Блок Что мы делаем*/
 
 /* Начало - Блок Производства*/
 .benefit {
     padding-left: 15%;
     padding-right: 15%;
-    background-color: #fff;
+    background-color: #ededed;
+    background-image: url('../img/bg_lime.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.benefit .content__title {
+    color: #2d2d2d;
+}
+.benefit  .content__title::after {
+    background-color: #2d2d2d;
 }
 .benefit .card-wrap {
     margin-top: 120px;
@@ -393,7 +493,7 @@ address {
     display: block;
     font-size: 90px;
     font-weight: 900;
-    color: #345176;
+    color: #df531d;
     position: absolute;
     top: -80px;
     left: 40px;
@@ -546,7 +646,7 @@ address {
     width: 100%;
     height: auto;
     position: relative;
-    background-image: url('../img/bg_contact.jpeg');
+    background-image: url('../img/bg_home_3.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -565,7 +665,7 @@ address {
 }
 
 .contact-block .blur {
-    background-image: url('../img/bg_contact.jpeg');
+    background-image: url('../img/bg_home_3.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;

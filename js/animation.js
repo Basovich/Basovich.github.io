@@ -13,8 +13,8 @@
     tl.to(".logo", .3, {'transform': 'rotate(-4deg)', 'transformOrigin': '50% 2%',})
     tl.to(".logo", .3, {'transform': 'rotate(0deg)', 'transformOrigin': '50% 2%',})
     tl.from(".logo__text", 1, {autoAlpha: 0, y: -10})
-    tl.to(".main-menu", 1, {'height': '100px'}, 'logo')
-    tl.to(".logo", 1, {'height': '80px', 'width': '80px', 'transform': 'matrix(1, 0, 0, 1, 0, 7)'}, 'logo');
+    tl.to(".main-menu", 1, {'height': '80px'}, 'logo')
+    tl.to(".logo", 1, {'height': '80px', 'width': '80px', 'transform': 'matrix(1, 0, 0, 1, 0, 0)'}, 'logo');
     /*END animation logo*/
 
     /*START parallax photo on mousse*/
