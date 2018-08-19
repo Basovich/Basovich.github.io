@@ -149,7 +149,7 @@ address {
     color: #fff;
 }
 .action-block__description {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 40px;
     color: #fff;
 }
@@ -238,12 +238,19 @@ address {
     padding: 10px 30px;
     background-color: #078A42;
     border: none;
+    border-radius: 4px;
     color: #fff;
     font-size: 16px;
     text-transform: uppercase;
     cursor: pointer;
     outline: none;
     box-shadow: 0 2px 15px 0 rgba(50, 50, 50, 0.75);
+    transform: translateY(-2px);
+    transition: box-shadow .2s ease-in, transform .2s ease-in;
+}
+.button:hover {
+    box-shadow: 0 0 0 0 rgba(50, 50, 50, 0.75);
+    transform: translateY(0);
 }
 /* Конец - кнопка*/
 
@@ -362,15 +369,18 @@ address {
 /* Конец - Блок Кто мы*/
 
 /* Начало - Блок Что мы делаем*/
+.wrapp-block { /*блок продуктов и как мы работаем, обьеденил, что бы фон не резало*/
+    background-color: #ededed;
+    background-image: url('../img/bg_lime.png');
+    background-repeat: repeat;
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+}
+
 .product {
     padding-left: 15%;
     padding-right: 15%;
-    background-color: #ededed;
-    background-image: url('../img/bg_lime.png');
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center;
     position: relative;
     z-index: 10;
 }
@@ -462,12 +472,12 @@ address {
 .benefit {
     padding-left: 15%;
     padding-right: 15%;
-    background-color: #ededed;
-    background-image: url('../img/bg_lime.png');
-    background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center;
+    /*background-color: #ededed;*/
+    /*background-image: url('../img/bg_lime.png');*/
+    /*background-repeat: no-repeat;*/
+    /*-webkit-background-size: cover;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
 }
 .benefit .content__title {
     color: #2d2d2d;
@@ -485,6 +495,10 @@ address {
     padding: 20px 40px 40px 40px;
 }
 
+.benefit .content__card {
+    background-color: rgba(207, 161, 195, 0.8);
+}
+
 .benefit .content__card-text {
     padding: 0;
 }
@@ -493,7 +507,7 @@ address {
     display: block;
     font-size: 90px;
     font-weight: 900;
-    color: #df531d;
+    color: #fff;
     position: absolute;
     top: -80px;
     left: 40px;
@@ -530,7 +544,7 @@ address {
     justify-content: space-between;
     position: relative;
     z-index: 10;
-    background-color: #fff;
+    background-color: #e9dfdc;
 }
 
 /*Левая сторона*/
@@ -632,12 +646,12 @@ address {
     top: 50%;
     left: 0;
     transform: translateX(35%) translateY(-50%);
-    z-index: 1;
     opacity: 0;
 }
 
 .content.active {
     opacity: 1;
+    z-index: 1;
 }
 /* Конец - Блок Галереи*/
 
@@ -646,7 +660,7 @@ address {
     width: 100%;
     height: auto;
     position: relative;
-    background-image: url('../img/bg_home_3.jpg');
+    background-image: url('../img/bg_contact.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -654,10 +668,9 @@ address {
 }
 
 .contact-block .wrap {
-    width: 60%;
+    width: 100%;
     height: 100%;
     position: relative;
-    left: 20%;
     overflow: hidden;
     z-index: 2;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
@@ -665,7 +678,7 @@ address {
 }
 
 .contact-block .blur {
-    background-image: url('../img/bg_home_3.jpg');
+    background-image: url('../img/bg_contact.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -718,6 +731,7 @@ textarea {
     padding: 10px;
     font-size: 18px;
     border: none;
+    color: #FFF;
     border-bottom: 1px solid #fff;
     margin-bottom: 40px;
 }
@@ -749,7 +763,7 @@ textarea:focus ~ .label-box label,
 textarea:valid ~ .label-box label {
     font-size: 14px;
     transform: translateY(-35px);
-    color: #416f9c;
+    color: #ffffff;
 }
 
 .label-box::before,
@@ -759,7 +773,7 @@ textarea:valid ~ .label-box label {
     height: 2px;
     width: 0;
     bottom: 40px;
-    background-color: #416f9c;
+    background-color: #fff;
     transition: all 0.3s;
 }
 
@@ -770,7 +784,7 @@ textarea ~ .label-box::after {
     height: 2px;
     width: 0;
     bottom: 47px;
-    background-color: #416f9c;
+    background-color: #fff;
     transition: all 0.3s;
 }
 
@@ -792,16 +806,6 @@ textarea:focus ~ .label-box::after {
 /* Конец - секция контакты*/
 
 /* Начало - секция Подвал*/
-body {
-    /*padding-bottom: 100px;*/
-}
-
-.wrapper-page {
-    /*position: relative;*/
-    /*z-index: 20;*/
-    /*overflow: hidden;*/
-}
-
 .footer {
     display: flex;
     justify-content: center;
@@ -816,10 +820,6 @@ body {
     /*z-index: 12;*/
     color: #fff;
     background-color: #55946d;
-    background-image: url(../img/Home.png);
-    -webkit-background-size: contain;
-    background-size: contain;
-    background-position: center;
 }
 
 

@@ -76,6 +76,26 @@
         vertical: true,
         horizontal: false
     });
+
+    var rellax_3 = new Rellax('.up', {
+        speed: -1,
+        center: true,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+    });
+
+    var rellax_4 = new Rellax('.down', {
+        speed: 1,
+        center: true,
+        wrapper: null,
+        round: true,
+        vertical: true,
+        horizontal: false
+    });
+
+
     /*END parallax on scroll*/
 
 
