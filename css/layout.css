@@ -692,7 +692,6 @@ address {
     top: 50%;
     left: 60%;
     transform: translateY(-50%) translateX(-50%);
-    background-color: #345176;
 }
 
 .img-slide-group {
@@ -706,8 +705,189 @@ address {
 
 .img-slide-group.active {
     opacity: 1;
-    background-color: #444;
+    /*background-color: #444;*/
 }
+
+.slide-group-fresh .img-slide:nth-of-type(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/menu-slider/menu-slider-fresh-1.jpeg);
+    background-repeat:no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    animation: fresh-slider-1 9s ease-in infinite;
+}
+.slide-group-fresh .img-slide:nth-of-type(2) {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/menu-slider/menu-slider-fresh-2.jpeg);
+    background-repeat:no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fresh-slider-2 9s ease-in infinite;
+}
+.slide-group-fresh .img-slide:nth-of-type(3) {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/menu-slider/menu-slider-fresh-3.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fresh-slider-3 9s ease-in infinite;
+}
+
+.slide-group-smoothies .img-slide:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/menu-slider/menu-slider-smooth-1.jpeg);
+    background-repeat:no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fresh-slider-1 9s ease-in infinite;
+}
+.slide-group-smoothies .img-slide:nth-of-type(2) {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/menu-slider/menu-slider-smooth-2.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fresh-slider-2 9s ease-in infinite;
+}
+.slide-group-smoothies .img-slide:nth-of-type(3) {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/menu-slider/menu-slider-smooth-3.jpeg);
+    background-repeat:no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fresh-slider-3 9s ease-in infinite;
+}
+
+.slide-group-salad .img-slide:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/menu-slider/menu-slider-salad-1.jpeg);
+    background-repeat:no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fresh-slider-1 9s ease-in infinite;
+}
+.slide-group-salad .img-slide:nth-of-type(2) {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/menu-slider/menu-slider-salad-2.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fresh-slider-2 9s ease-in infinite;
+}
+.slide-group-salad .img-slide:nth-of-type(3) {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/menu-slider/menu-slider-salad-3.jpg);
+    background-repeat:no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fresh-slider-3 9s ease-in infinite;
+}
+
+
+
+@keyframes fresh-slider-1 {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 0;
+    }
+    97% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fresh-slider-2 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 1;
+    }
+    63% {
+        opacity: 1;
+    }
+    66% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fresh-slider-3 {
+    0% {
+        opacity: 0;
+    }
+    63% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 1;
+    }
+    97% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
 
 /*Правая сторона*/
 .menu-gallery .wrap {
