@@ -14,7 +14,8 @@
     tl.to(".logo", .3, {'transform': 'rotate(0deg)', 'transformOrigin': '50% 2%',})
     tl.from(".logo__text", 1, {autoAlpha: 0, y: -10})
     tl.to(".main-menu", 1, {'height': '80px'}, 'logo')
-    tl.to(".logo", 1, {'height': '80px', 'width': '80px', 'transform': 'matrix(1, 0, 0, 1, 0, 0)'}, 'logo');
+    tl.to(".logo", 1, {'height': '80px', 'width': '80px', 'transform': 'matrix(1, 0, 0, 1, 0, 0)'}, 'logo')
+    tl.to(".main-menu__link", 1, {autoAlpha: 1});
     /*END animation logo*/
 
     /*START parallax photo on mousse*/
@@ -94,21 +95,15 @@
         vertical: true,
         horizontal: false
     });
-
-
     /*END parallax on scroll*/
 
-
-
-
-
-
-
-
-
-
-
-
+    /*START smooth scroll to anchor*/
+    $(".main-menu__link").on("click", function(e) {
+        var id = $(this).data("anchor");
+        var top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+    /*END smooth scroll to anchor*/
 
 
 }(jQuery));

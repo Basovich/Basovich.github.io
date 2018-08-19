@@ -31,10 +31,8 @@
     $(window).on('load resize', function() {
         if( $(window).width() <= 1440 ) {
             defaultOptions.stepSize = 50;
-            console.log('<= 1440 ' + defaultOptions.stepSize);
         } else if( $(window).width() >= 1440 ) {
             defaultOptions.stepSize = 20;
-            console.log('>= 1440 ' + defaultOptions.stepSize);
         }
     });
 
