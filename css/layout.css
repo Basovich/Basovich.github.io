@@ -276,7 +276,7 @@ address {
 
 .slide__content {
     width: 50vw;
-    z-index: 2;
+    z-index: 10;
     position: absolute;
     top: 60%;
     left: 50%;
