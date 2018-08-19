@@ -103,6 +103,14 @@
         var top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1500);
     });
+
+    $(".feed-back-anchor").on("click", function(e) {
+        var id = $(this).data("anchor");
+        var top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
+
+
     /*END smooth scroll to anchor*/
 
 
