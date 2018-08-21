@@ -76,6 +76,8 @@ address {
     width: 20%;
     min-width: 250px;
     height: 250px;
+    opacity: 0;
+    transform: translateY(100px);
     transition-timing-function: cubic-bezier(.83, .06, .22, 1.04);
 }
 .logo__img {
@@ -949,6 +951,7 @@ address {
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
+    z-index: 10;
 }
 
 .contact-block .wrap {

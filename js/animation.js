@@ -4,7 +4,7 @@
     /*START animation logo*/
     var tl = new TimelineLite();
 
-    tl.from(".logo", 1, {autoAlpha: 0, y: 100})
+    tl.to(".logo", 1, {autoAlpha: 1, y: 0})
     tl.to(".logo", .3, {'transform': 'rotate(5deg)', 'transformOrigin': '50% 2%',})
     tl.to(".logo", .3, {'transform': 'rotate(-15deg)', 'transformOrigin': '50% 2%',})
     tl.to(".logo", .3, {'transform': 'rotate(15deg)', 'transformOrigin': '50% 2%',})
@@ -26,7 +26,7 @@
         var y2;
         var l = -parseInt($('.slide').width() - $('.head-page-slider').width()) / 40;
         var t = -parseInt($('.slide').height() - $('.head-page-slider').height()) / 40;
-        $('.slide').css('transform', 'translateX(' + (l / 50) + 'px)' + ' translateY(' + (t / 50) + 'px)');
+        // $('.slide').css('transform', 'translateX(' + (l / 50) + 'px)' + ' translateY(' + (t / 50) + 'px)');
         $('.slide-item').mouseenter(function (e) {
             var x = e.pageX;
             var y = e.pageY;
