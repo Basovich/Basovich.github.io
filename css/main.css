@@ -1,0 +1,83 @@
+@charset "UTF-8";
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.4; }
+
+.todo__list {
+  height: 50vh;
+  background-color: #fff;
+  border: 2px solid #999;
+  overflow-y: auto;
+  overflow-x: hidden; }
+  .todo__list .btn {
+    margin-right: 10px; }
+
+.todo__control {
+  margin-top: 40px; }
+
+.todo__add {
+  width: calc(100% - 20px);
+  border: 2px solid #999;
+  margin: 40px 10px 20px 10px;
+  padding: 20px;
+  display: none; }
+  .todo__add #changeThisTask {
+    display: none; }
+  .todo__add .input-group {
+    margin: 10px 0; }
+  .todo__add label {
+    font-size: 18px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+  .todo__add label,
+  .todo__add input {
+    height: 28px; }
+  .todo__add #priorityAdd {
+    height: 28px;
+    padding: 3px 10px; }
+  .todo__add-textarea {
+    resize: none;
+    height: 120px; }
+
+.task {
+  width: calc(100% - 20px);
+  border: 2px solid #999;
+  margin: 20px 10px;
+  padding: 20px; }
+  .task__title {
+    margin-bottom: 20px; }
+  .task__info {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; }
+  .task__description {
+    font-size: 16px; }
+
+/*Error event*/
+.input-group {
+  position: relative; }
+  .input-group.error {
+    border-color: red; }
+    .input-group.error::after {
+      content: 'Поле обязательное для ввода!';
+      display: block;
+      text-align: right;
+      width: 100%;
+      color: red; }
+
+body {
+  background-color: #E4E4E4;
+  font-size: 16px;
+  color: #303334; }
+
+.btn {
+  cursor: pointer; }
+
+.check-lg {
+  width: 18px;
+  height: 18px; }
