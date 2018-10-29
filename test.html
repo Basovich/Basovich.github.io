@@ -8,11 +8,10 @@
     <title>test work</title>
 </head>
 <body>
-
 <section class="i-hotel">
     <div class="container no-padding">
-        <div class="row no-margin no-padding">
-            <div class="col-7">
+        <div class="row no-margin no-padding justify-content-between">
+            <div class="col-7 pl-0">
                 <div class="block mt-3 mb-3">
                     <div class="rating-stars mr-3">
                         <span class="rating-stars__item--full"></span>
@@ -39,25 +38,43 @@
                     <span class="free-parking mr-4">Парковка</span>
                     <span class="first-line mr-4">1-я линия</span>
                 </div>
-                <div class="big-slider">
-                    <img src="it/img/slide_1.jpg" alt="">
-                    <img src="it/img/slide_2.jpeg" alt="">
-                    <img src="it/img/slide_3.jpeg" alt="">
-                    <img src="it/img/slide_4.jpeg" alt="">
-                    <img src="it/img/slide_5.jpeg" alt="">
-                    <img src="it/img/slide_6.jpeg" alt="">
-                    <img src="it/img/slide_7.jpeg" alt="">
-                    <img src="it/img/slide_1.jpg" alt="">
-                </div>
-                <div class="slider-preview mt-4">
-                    <img src="it/img/slide_1.jpg" alt="">
-                    <img src="it/img/slide_2.jpeg" alt="">
-                    <img src="it/img/slide_3.jpeg" alt="">
-                    <img src="it/img/slide_4.jpeg" alt="">
-                    <img src="it/img/slide_5.jpeg" alt="">
-                    <img src="it/img/slide_6.jpeg" alt="">
-                    <img src="it/img/slide_7.jpeg" alt="">
-                    <img src="it/img/slide_1.jpg" alt="">
+                <div class="sliders-wrap">
+                    <div class="big-slider">
+                        <img src="it/img/slide_1.jpg" alt="">
+                        <img src="it/img/slide_2.jpeg" alt="">
+                        <img src="it/img/slide_3.jpeg" alt="">
+                        <img src="it/img/slide_4.jpeg" alt="">
+                        <img src="it/img/slide_5.jpeg" alt="">
+                        <img src="it/img/slide_6.jpeg" alt="">
+                        <img src="it/img/slide_7.jpeg" alt="">
+                        <img src="it/img/slide_1.jpg" alt="">
+                    </div>
+                    <div class="slider-preview">
+                        <div class="slide">
+                            <img src="it/img/slide_1.jpg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="it/img/slide_2.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="it/img/slide_3.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="it/img/slide_4.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="it/img/slide_5.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="it/img/slide_6.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="it/img/slide_7.jpeg" alt="">
+                        </div>
+                        <div class="slide">
+                            <img src="it/img/slide_1.jpg" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-5">
@@ -78,12 +95,12 @@
                     </div>
                     <div class="row no-margin">
                         <h4 class="all-ratings mb-4">Все рейтинги</h4>
-                        <div class="row col-12 mb-2 no-padding rating-position no-margin justify-content-between align-items-end">
+                        <div class="row col-12 mb-3 no-padding rating-position no-margin justify-content-between align-items-end">
                             <div class="rating-position__name col-3 no-padding">Tripadvisor</div>
                             <div class="rating-position__bar"></div>
                             <div class="rating-position__value"><span class="rating-position__value-current">8.4</span> из 10</div>
                         </div>
-                        <div class="row col-12 mb-2 no-padding rating-position no-margin justify-content-between align-items-end">
+                        <div class="row col-12 mb-3 no-padding rating-position no-margin justify-content-between align-items-end">
                             <div class="rating-position__name col-3 no-padding">Tophotels</div>
                             <div class="rating-position__bar"></div>
                             <div class="rating-position__value"><span class="rating-position__value-current">8.4</span> из 10</div>
@@ -107,6 +124,21 @@
                                 <div class="col-6 pt-1 pb-2 data-input-field no-margin">
                                     <input class="data-input" type="text" value="до ДД.ММ.ГГГГ">
                                 </div>
+                                <div class="dropdown__list dropdown__list--filter">
+                                    <div class="datepicker-inputs js-date-inputs">
+                                        <div class="datepicker-inputs__col">
+                                            <div class="datepicker-inputs__label">От</div>
+                                            <input class="flat-range-control js-date-input js-date-mask highlight" type="text">
+                                            <div class="datepicker-inputs__month-name js-month-from">Октябрь</div>
+                                        </div>
+                                        <div class="datepicker-inputs__col">
+                                            <div class="datepicker-inputs__label js-datepicker-label" data-text="До">До</div>
+                                            <input class="flat-range-control js-date-input js-date-mask highlight" type="text" hidden="" style="display: block;">
+                                            <div class="datepicker-inputs__month-name js-month-to">Ноябрь</div>
+                                        </div>
+                                    </div>
+                                    <div class="js-date-range js-range-has-inputs" data-flat="true" style="position: relative;"><span class="datepick-foottip">* Диапазон дат поиска - 12 дней</span><div class="pickmeup pmu-view-days pmu-flat"><div class="pmu-instance"><nav><div class="pmu-prev pmu-button" style="visibility: hidden;"><svg class="icon" width="8" height="12"><use xlink:href="#left-chevron" aria-hidden="true"></use></svg></div><div class="pmu-month pmu-button">Октябрь, 2018</div><div class="pmu-next pmu-button" style="visibility: visible;"><svg class="icon" width="8" height="12"><use xlink:href="#right-chevron" aria-hidden="true"></use></svg></div></nav><nav class="pmu-day-of-week"><div>Пн.</div><div>Вт.</div><div>Ср.</div><div>Чт.</div><div>Пт.</div><div>Сб.</div><div>Вс.</div></nav><div class="pmu-years"><div class="pmu-disabled pmu-button">2012</div><div class="pmu-disabled pmu-button">2013</div><div class="pmu-disabled pmu-button">2014</div><div class="pmu-disabled pmu-button">2015</div><div class="pmu-disabled pmu-button">2016</div><div class="pmu-disabled pmu-button">2017</div><div class="pmu-selected pmu-button">2018</div><div class="pmu-button">2019</div><div class="pmu-button">2020</div><div class="pmu-button">2021</div><div class="pmu-button">2022</div><div class="pmu-button">2023</div></div><div class="pmu-months"><div class="pmu-disabled pmu-button">Янв</div><div class="pmu-disabled pmu-button">Фев</div><div class="pmu-disabled pmu-button">Мар</div><div class="pmu-disabled pmu-button">Апр</div><div class="pmu-disabled pmu-button">Май</div><div class="pmu-disabled pmu-button">Июн</div><div class="pmu-disabled pmu-button">Июл</div><div class="pmu-disabled pmu-button">Авг</div><div class="pmu-disabled pmu-button">Сен</div><div class="pmu-button">Окт</div><div class="pmu-selected pmu-button">Ноя</div><div class="pmu-button">Дек</div></div><div class="pmu-days"><div class="pmu-disabled pmu-button">1</div><div class="pmu-disabled pmu-button">2</div><div class="pmu-disabled pmu-button">3</div><div class="pmu-disabled pmu-button">4</div><div class="pmu-disabled pmu-button">5</div><div class="pmu-saturday pmu-disabled pmu-button">6</div><div class="pmu-sunday pmu-disabled pmu-button">7</div><div class="pmu-disabled pmu-button">8</div><div class="pmu-disabled pmu-button">9</div><div class="pmu-disabled pmu-button">10</div><div class="pmu-disabled pmu-button">11</div><div class="pmu-disabled pmu-button">12</div><div class="pmu-saturday pmu-disabled pmu-button">13</div><div class="pmu-sunday pmu-disabled pmu-button">14</div><div class="pmu-disabled pmu-button">15</div><div class="pmu-disabled pmu-button">16</div><div class="pmu-disabled pmu-button">17</div><div class="pmu-disabled pmu-button">18</div><div class="pmu-disabled pmu-button">19</div><div class="pmu-saturday pmu-disabled pmu-button">20</div><div class="pmu-sunday pmu-disabled pmu-button">21</div><div class="pmu-disabled pmu-button">22</div><div class="pmu-disabled pmu-button">23</div><div class="pmu-disabled pmu-button">24</div><div class="pmu-disabled pmu-button">25</div><div class="pmu-disabled pmu-button">26</div><div class="pmu-saturday pmu-disabled pmu-button">27</div><div class="pmu-sunday pmu-disabled pmu-button">28</div><div class="pmu-disabled pmu-today pmu-button">29</div><div class="pmu-button">30</div><div class="pmu-button">31</div><div class="pmu-not-in-month pmu-selected pmu-button">1</div><div class="pmu-not-in-month pmu-selected pmu-button">2</div><div class="pmu-not-in-month pmu-saturday pmu-selected pmu-button">3</div><div class="pmu-not-in-month pmu-sunday pmu-selected pmu-button">4</div><div class="pmu-not-in-month pmu-selected pmu-button">5</div><div class="pmu-not-in-month pmu-selected pmu-button">6</div><div class="pmu-not-in-month pmu-selected pmu-button">7</div><div class="pmu-not-in-month pmu-selected pmu-button">8</div><div class="pmu-not-in-month pmu-selected pmu-button">9</div><div class="pmu-not-in-month pmu-saturday pmu-selected pmu-button">10</div><div class="pmu-not-in-month pmu-sunday pmu-selected pmu-button">11</div></div></div><div class="pmu-instance"><nav><div class="pmu-prev pmu-button"><svg class="icon" width="8" height="12"><use xlink:href="#left-chevron" aria-hidden="true"></use></svg></div><div class="pmu-month pmu-button">Ноябрь, 2018</div><div class="pmu-next pmu-button"><svg class="icon" width="8" height="12"><use xlink:href="#right-chevron" aria-hidden="true"></use></svg></div></nav><nav class="pmu-day-of-week"><div>Пн.</div><div>Вт.</div><div>Ср.</div><div>Чт.</div><div>Пт.</div><div>Сб.</div><div>Вс.</div></nav><div class="pmu-years"><div class="pmu-disabled pmu-button">2012</div><div class="pmu-disabled pmu-button">2013</div><div class="pmu-disabled pmu-button">2014</div><div class="pmu-disabled pmu-button">2015</div><div class="pmu-disabled pmu-button">2016</div><div class="pmu-disabled pmu-button">2017</div><div class="pmu-selected pmu-button">2018</div><div class="pmu-button">2019</div><div class="pmu-button">2020</div><div class="pmu-button">2021</div><div class="pmu-button">2022</div><div class="pmu-button">2023</div></div><div class="pmu-months"><div class="pmu-disabled pmu-button">Янв</div><div class="pmu-disabled pmu-button">Фев</div><div class="pmu-disabled pmu-button">Мар</div><div class="pmu-disabled pmu-button">Апр</div><div class="pmu-disabled pmu-button">Май</div><div class="pmu-disabled pmu-button">Июн</div><div class="pmu-disabled pmu-button">Июл</div><div class="pmu-disabled pmu-button">Авг</div><div class="pmu-disabled pmu-button">Сен</div><div class="pmu-button">Окт</div><div class="pmu-selected pmu-button">Ноя</div><div class="pmu-button">Дек</div></div><div class="pmu-days"><div class="pmu-not-in-month pmu-disabled pmu-today pmu-button">29</div><div class="pmu-not-in-month pmu-button">30</div><div class="pmu-not-in-month pmu-button">31</div><div class="pmu-selected pmu-button">1</div><div class="pmu-selected pmu-button">2</div><div class="pmu-saturday pmu-selected pmu-button">3</div><div class="pmu-sunday pmu-selected pmu-button">4</div><div class="pmu-selected pmu-button">5</div><div class="pmu-selected pmu-button">6</div><div class="pmu-selected pmu-button">7</div><div class="pmu-selected pmu-button">8</div><div class="pmu-selected pmu-button">9</div><div class="pmu-saturday pmu-selected pmu-button">10</div><div class="pmu-sunday pmu-selected pmu-button">11</div><div class="pmu-selected pmu-button">12</div><div class="pmu-button">13</div><div class="pmu-button">14</div><div class="pmu-button">15</div><div class="pmu-button">16</div><div class="pmu-saturday pmu-button">17</div><div class="pmu-sunday pmu-button">18</div><div class="pmu-button">19</div><div class="pmu-button">20</div><div class="pmu-button">21</div><div class="pmu-button">22</div><div class="pmu-button">23</div><div class="pmu-saturday pmu-button">24</div><div class="pmu-sunday pmu-button">25</div><div class="pmu-button">26</div><div class="pmu-button">27</div><div class="pmu-button">28</div><div class="pmu-button">29</div><div class="pmu-button">30</div><div class="pmu-not-in-month pmu-saturday pmu-button">1</div><div class="pmu-not-in-month pmu-sunday pmu-button">2</div><div class="pmu-not-in-month pmu-button">3</div><div class="pmu-not-in-month pmu-button">4</div><div class="pmu-not-in-month pmu-button">5</div><div class="pmu-not-in-month pmu-button">6</div><div class="pmu-not-in-month pmu-button">7</div><div class="pmu-not-in-month pmu-saturday pmu-button">8</div><div class="pmu-not-in-month pmu-sunday pmu-button">9</div></div></div></div></div>
+                                    <button type="button" class="btn close-search-dropdown js-close-dropdown js-close-select"><svg class="icon" width="10" height="10"><use xlink:href="#close" aria-hidden="true"></use></svg></button></div>
                             </div>
                         </div>
                         <div class="row no-margin mt-3 mb-3">
@@ -120,8 +152,8 @@
                                 <div class="nice-select border-block js-select" tabindex="0">
                                     <span class="current">2 взрослых</span>
                                     <ul class="list">
-                                        <li data-value="" class="option selected focus">1 взрослый</li>
-                                        <li data-value="" class="option">2 взрослых</li>
+                                        <li data-value="" class="option">1 взрослый</li>
+                                        <li data-value="" class="option selected focus">2 взрослых</li>
                                         <li data-value="" class="option">3 взрослых</li>
                                         <li data-value="" class="option">4 взрослых</li>
                                         <button type="button"
@@ -161,7 +193,7 @@
                                     <option value="">12 Ночей</option>
                                 </select>
                                 <div class="nice-select border-block js-select" tabindex="0">
-                                    <span class="current">Ночей</span>
+                                    <span class="current">6 Ночей</span>
                                     <ul class="list">
                                         <li data-value="" class="option selected focus">6 Ночей</li>
                                         <li data-value="" class="option">7 Ночей</li>
