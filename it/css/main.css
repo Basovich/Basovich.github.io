@@ -316,7 +316,7 @@ body {
   display: flex; }
 
 .big-slider {
-  height: 504px;
+  height: 508px;
   width: calc(100% - 78px);
   margin-right: 20px; }
   .big-slider img {
@@ -346,7 +346,7 @@ body {
 
 .slider-preview {
   width: 78px;
-  height: 504px;
+  height: 508px;
   margin-right: -10px;
   margin-left: -10px;
   position: relative; }
@@ -365,7 +365,7 @@ body {
   .slider-preview .slick-track img:last-child {
     margin-bottom: 0; }
   .slider-preview .slick-list {
-    height: 504px !important;
+    height: 508px !important;
     width: 78px; }
   .slider-preview .slick-current {
     position: relative; }
@@ -378,7 +378,7 @@ body {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
-    top: 4px;
+    top: 5px;
     left: 0;
     z-index: 1; }
     .slider-preview .prev-slide::before {
