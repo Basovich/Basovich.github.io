@@ -1,0 +1,112 @@
+.services {
+
+  &__item {
+    padding: 50px 50px 40px 50px;
+    background-color: #fff;
+    border: 2px solid map-get($colors, line-gray-light);
+
+    @include max(1150px) {
+      padding: 36px;
+    }
+
+    @include max(850px) {
+      padding: 20px;
+    }
+
+
+    &:nth-of-type(1) {
+      border: 0;
+      background-image: linear-gradient(to right, map-get($colors, bg-gray) 25%, map-get($colors, txt-blue) 25%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+
+      @include max(850px) {
+        padding: 20px;
+        background-image: none;
+        background-color: map-get($colors, txt-blue);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -24px;
+        left: 0;
+        width: 100%;
+        height: 26px;
+        background-image: linear-gradient(to right, map-get($colors, bg-gray) 25%, map-get($colors, txt-blue) 25%);
+
+        @include max(850px) {
+          display: none;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -24px;
+        left: 0;
+        width: 100%;
+        height: 26px;
+        background-image: linear-gradient(to right, map-get($colors, bg-gray) 25%, map-get($colors, txt-blue) 25%);
+
+        @include max(850px) {
+          display: none;
+        }
+      }
+
+      & .services__title {
+        padding-left: 40%;
+
+        @include max(850px) {
+          padding-left: 0;
+        }
+      }
+
+      & .txt-link {
+        padding-left: 40%;
+
+        @include max(850px) {
+          padding-left: 0;
+        }
+      }
+    }
+
+    &:nth-of-type(3) {
+      border-left: 0;
+    }
+  }
+
+  &__title {
+    font-size: 21px;
+    color: map-get($colors, txt-blue);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.143;
+    margin: 0 0 30px 0;
+
+    @include max(1280px) {
+      font-size: 20px;
+    }
+
+    @include max(1150px) {
+      font-size: 18px;
+    }
+
+    &--white {
+      color: #fff;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &-wrap {
+      width: 100%;
+      height: 225px;
+    }
+  }
+}

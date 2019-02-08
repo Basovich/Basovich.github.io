@@ -1,0 +1,14 @@
+@mixin bg-img {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+@mixin max($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}

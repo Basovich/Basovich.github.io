@@ -1,0 +1,253 @@
+.top-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px 14% 40px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+
+  @include max(1440px) {
+    padding: 50px 12% 40px 4%;
+  }
+
+  @include max(1280px) {
+    padding: 40px 10% 40px 4%;
+  }
+
+  @include max(1150px) {
+    padding: 40px 6%;
+  }
+
+  @include max(570px) {
+    padding: 20px 6%;
+  }
+
+
+  & .logo {
+    display: block;
+    width: 220px;
+    margin-right: 120px;
+
+    @include max(1280px) {
+      width: 200px;
+    }
+
+    @include max(1260px) {
+      width: 180px;
+    }
+
+    @include max(570px) {
+      width: 140px;
+      margin-right: 10px;
+    }
+  }
+
+  &-item {
+    width: calc(100% - 340px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 6px;
+
+    @include max(1260px) {
+      justify-content: flex-end;
+    }
+
+    @include max(570px) {
+      width: auto;
+      margin-top: 0;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: -25px;
+      background-color:  map-get($colors, line-gray-blue);
+      margin-top: 5px;
+
+      @include max(1260px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.main-menu {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include max(1260px) {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: -320px;
+    bottom: 0;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    z-index: 999 !important;
+    padding: 40px;
+    pointer-events: none;
+    transform: translateX(0);
+    transition: transform .4s ease-in, opacity .4s ease-in;;
+  }
+
+  &.isMenuOpen {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-100%);
+    transition: transform .4s ease-in, opacity .2s ease-in;
+  }
+
+  &__item {
+    position: relative;
+    width: 20%;
+
+    &:nth-of-type(1),
+    &:nth-of-type(2) {
+      text-align: left;
+    }
+
+    &:nth-of-type(3),
+    &:nth-of-type(4) {
+      text-align: right;
+      @include max(1260px) {
+        text-align: left;
+      }
+    }
+
+    &:nth-of-type(2),
+    &:nth-of-type(3) {
+      width: 30%;
+
+      @include max(1260px) {
+        width: 100%;
+      }
+    }
+
+    @include max(1260px) {
+      width: 100%;
+      padding: 10px 0;
+      border-bottom: 1px solid map_get($colors, line-gray-light);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.6;
+    text-decoration: none;
+    cursor: pointer;
+
+    @include max(1280px) {
+      font-size: 14px;
+      color: #fff;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+
+    @include max(1260px) {
+      color: #000000;
+    }
+
+    &.isOpen ~ .main-menu__submenu {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+  }
+
+  &__submenu {
+    position: absolute;
+    font-size: 15px;
+    opacity: 0;
+    pointer-events: none;
+    top: calc(100% + 30px);
+    right: 0;
+    background-color: #fff;
+    padding: 12px;
+    z-index: 1;
+    box-shadow: -1px 3px 12px 0px rgba(0, 0, 0, 0.24);
+    transform: translateY(10px);
+    transition: opacity .2s ease-in, transform .2s ease-in;
+
+    @include max(1260px) {
+      position: relative;
+      opacity: 1;
+      pointer-events: auto;
+      padding: 0 0 10px 14px;
+      box-shadow: none;
+    }
+
+    &-item {
+      text-align: left;
+
+      @include max(1260px) {
+        padding: 6px 0;
+      }
+    }
+
+    &-link {
+      font-size: 15px;
+      color: map-get($colors, txt-blue);
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.6;
+      text-decoration: none;
+      cursor: pointer;
+
+      @include max(1280px) {
+        font-size: 14px;
+        color: #000000;
+        font-weight: 500;
+      }
+
+    }
+  }
+}
+
+
+.burger {
+  margin-left: 40px;
+  display: none;
+
+  @include max(1260px) {
+    display: flex;
+  }
+}
+
+.menu-icon {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+  cursor: pointer;
+
+  &--close {
+    fill: #000;
+  }
+}
+
+.close-burger {
+  display: none;
+
+  @include max(1260px) {
+    display: block;
+    position: fixed;
+    top: 12px;
+    right: 15px;
+  }
+}

@@ -1,0 +1,79 @@
+.head-page {
+  width: 100%;
+  height: auto;
+  @include bg-img;
+  background-image: url(../img/bg-head.jpg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include max(1366px) {
+    background-attachment: scroll;
+  }
+
+  @include max(1150px) {
+    min-height: auto;
+  }
+
+  & .container {
+    @include max(1150px) {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+  }
+}
+
+.page-title {
+  font-size: 110px;
+  text-align: right;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.25);
+  margin: 0;
+
+  @include max(1440px) {
+    font-size: 90px;
+  }
+
+  @include max(1280px) {
+    font-size: 80px;
+  }
+
+  @include max(1150px) {
+    font-size: 64px;
+  }
+
+  @include max(850px) {
+    font-size: 50px;
+  }
+
+  @include max(570px) {
+    font-size: 32px;
+  }
+
+  @include max(370px) {
+    font-size: 28px;
+  }
+}
+
+.page-subtitle {
+  font-size: 46px;
+  text-align: right;
+  color: rgb(255, 255, 255);
+
+  @include max(1440px) {
+    font-size: 40px;
+  }
+
+  @include max(1280px) {
+    font-size: 34px;
+  }
+
+  @include max(1150px) {
+    font-size: 30px;
+  }
+
+  @include max(570px) {
+    font-size: 22px;
+  }
+}
